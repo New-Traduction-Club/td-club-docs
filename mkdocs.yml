@@ -1,4 +1,73 @@
-site_name: My site
-site_url: https://docs.traduction-club.live
+site_name: Traduction Club Documentation
+site_description: Official documentation repository for internal tools, graphics engines, and other projects.
+site_author: Traduction Club!
+
+repo_name: New-Traduction-Club/td-club-docs
+repo_url: https://github.com/New-Traduction-Club/td-club-docs
+
 theme:
   name: material
+  
+  logo: https://files.traduction-club.live/favicon.ico
+  favicon: https://files.traduction-club.live/favicon.ico
+  
+  font:
+    text: Roboto
+    code: Fira Code
+  
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+        
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.path
+    - navigation.tracking
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+
+extra_css:
+  - stylesheets/custom.css
+
+nav:
+  - Home: index.md
+  - Just Sayori:
+    - Home: js/home.md
+    - Custom Locations: js/Backgrounds-System.md
+    - Coding Style: js/Coding-Style.md
+    - Data Transfer: js/Data-Transfer.md
+    - Gifting System: js/Gifting-System.md
+    - Gifts (SPOILERS): js/Gifts-(SPOILERS).md
+    - Installing the mod: js/Installing-the-mod.md
+    - Minigames System: js/Minigame-Hub.md
+    - Outfits: js/Outfits.md
+    - Submodding: js/Submodding.md

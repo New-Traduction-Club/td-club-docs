@@ -1,0 +1,154 @@
+
+[data-md-color-scheme="slate"] {
+    --md-primary-fg-color: #121820; 
+    --md-default-bg-color: #0a0e14; 
+    
+    --md-default-fg-color: #e5e7eb;
+    --md-typeset-color: #ffffff;
+    --md-typeset-a-color: var(--md-accent-fg-color);
+    
+    --md-default-fg-color--light: rgba(255, 255, 255, 0.1); 
+    --md-accent-fg-color: #eab308;
+}
+
+[data-md-color-scheme="default"] {
+    --md-primary-fg-color: #121820;
+    
+    --md-default-fg-color: #374151;
+    --md-typeset-color: #111827;
+    
+    --md-accent-fg-color: #eab308; 
+}
+
+.md-header {
+    background-color: rgba(18, 24, 32, 0.85) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.md-nav__source {
+    background-color: #121820 !important; 
+}
+
+.md-nav--primary .md-nav__title {
+    background-color: transparent !important;
+    font-weight: bold;
+    border-bottom: 1px solid rgba(18, 24, 32, 0.1);
+}
+
+[data-md-color-scheme="slate"] .md-typeset h1,
+[data-md-color-scheme="slate"] .md-typeset h2,
+[data-md-color-scheme="slate"] .md-typeset h3,
+[data-md-color-scheme="slate"] .md-typeset h4,
+[data-md-color-scheme="slate"] .md-typeset h5,
+[data-md-color-scheme="slate"] .md-typeset h6 {
+    color: #ffffff !important;
+}
+
+[data-md-color-scheme="slate"] .md-typeset p,
+[data-md-color-scheme="slate"] .md-typeset li,
+[data-md-color-scheme="slate"] .md-typeset a {
+    color: #e5e7eb !important;
+}
+
+[data-md-color-scheme="slate"] .md-typeset h1 {
+    opacity: 1 !important;
+}
+
+[data-md-color-scheme="slate"] .md-nav__title,
+[data-md-color-scheme="slate"] .md-nav__title .md-nav__icon,
+[data-md-color-scheme="slate"] .md-nav__button {
+    color: #ffffff !important;
+    opacity: 1 !important;
+}
+
+[data-md-color-scheme="slate"] .md-nav__link {
+    color: #e5e7eb !important;
+}
+
+[data-md-color-scheme="slate"] .md-nav__link--active {
+    color: var(--md-accent-fg-color) !important;
+    opacity: 1 !important;
+}
+
+[data-md-color-scheme="default"] .md-nav__title,
+[data-md-color-scheme="default"] .md-nav__title .md-nav__icon,
+[data-md-color-scheme="default"] .md-nav__button {
+    color: #111827 !important;
+    opacity: 1 !important;
+}
+
+[data-md-color-scheme="slate"] .md-path__link,
+[data-md-color-scheme="slate"] .md-path__item {
+    color: #9ca3af !important;
+    opacity: 1 !important;
+}
+
+[data-md-color-scheme="slate"] .md-path__link:hover {
+    color: var(--md-accent-fg-color) !important;
+}
+
+[data-md-color-scheme="default"] .md-path__link,
+[data-md-color-scheme="default"] .md-path__item {
+    color: #4b5563 !important;
+    opacity: 1 !important;
+}
+
+[data-md-color-scheme="default"] .md-path__link:hover {
+    color: var(--md-accent-fg-color) !important;
+}
+
+[data-md-color-scheme="slate"] {
+    --md-code-hl-comment-color: #9ca3af !important;
+}
+
+[data-md-color-scheme="slate"] .highlight .c,
+[data-md-color-scheme="slate"] .highlight .c1,
+[data-md-color-scheme="slate"] .highlight .cm,
+[data-md-color-scheme="slate"] .highlight .cp,
+[data-md-color-scheme="slate"] .highlight .cs {
+    color: #9ca3af !important; 
+    font-style: italic;
+}
+
+[data-md-color-scheme="default"] {
+    --md-code-hl-comment-color: #6b7280 !important;
+}
+
+[data-md-color-scheme="default"] .highlight .c,
+[data-md-color-scheme="default"] .highlight .c1,
+[data-md-color-scheme="default"] .highlight .cm,
+[data-md-color-scheme="default"] .highlight .cp,
+[data-md-color-scheme="default"] .highlight .cs {
+    color: #6b7280 !important;
+}
+
+[data-md-color-scheme="slate"] .md-typeset a {
+    color: #3b82f6 !important;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+[data-md-color-scheme="slate"] .md-typeset a:hover,
+[data-md-color-scheme="slate"] .md-typeset a:focus {
+    color: var(--md-accent-fg-color) !important;
+    text-decoration: underline;
+}
+
+[data-md-color-scheme="default"] .md-typeset a {
+    color: #2563eb !important;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+[data-md-color-scheme="default"] .md-typeset a:hover,
+[data-md-color-scheme="default"] .md-typeset a:focus {
+    color: var(--md-accent-fg-color) !important;
+    text-decoration: underline;
+}
+
+.md-typeset .headerlink {
+    color: transparent !important;
+}
