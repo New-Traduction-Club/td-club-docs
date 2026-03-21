@@ -31,7 +31,7 @@ The above code will import a submod with this information:
 - Name: `Submod example`
 - Description: `An example submod.`
 
-When creating dialogue submods, please try and adhere to the [Coding Style](https://github.com/Just3090/justsayori-mod/wiki/Coding-Style)
+When creating dialogue submods, please try and adhere to the [Coding Style](./Coding-Style.md)
 
 ## Submodding Guides
 

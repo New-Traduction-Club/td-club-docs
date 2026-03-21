@@ -1,0 +1,1 @@
+See [here](./Adding-Custom-Piano-Songs.md#submitting-piano-songs)
