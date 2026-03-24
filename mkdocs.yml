@@ -70,7 +70,9 @@ nav:
     - Installing the mod: js/Installing-the-mod.md
     - Minigames System: js/Minigame-Hub.md
     - Outfits: js/Outfits.md
+    - Persistent Variables: js/Persistent-Variables.md
     - Submodding: js/Submodding.md
+    - Submodding API Reference: js/Submod-API-Reference.md
   - Monika After Story (ES):
     - Inicio: mas-es/Home.md
     - API Keys: mas-es/API-Keys.md

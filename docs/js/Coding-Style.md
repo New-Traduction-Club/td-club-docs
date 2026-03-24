@@ -27,6 +27,8 @@ There *are* more, so be careful to check existing files if you are unsure.
 
 Persistent data is a way to store information that saves even when the game closes. You should only use this if you need to remember a variable's value across different play sessions (for example, tracking if a topic has been seen before).
 
+If you need real examples of existing persistent fields and naming patterns, see **[Persistent Variables Reference](./Persistent-Variables.md)**.
+
 ## VARIABLES
 
 Variable names should be descriptive and use `lowercase_with_underscores`. Abbreviations are fine if they are clear.

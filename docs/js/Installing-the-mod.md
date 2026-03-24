@@ -5,7 +5,7 @@
 ### 1. Prerequisites
 
 *   A fresh copy of Doki Doki Literature Club from the [official site](https://ddlc.moe).
-*   The latest release of the Just Sayori mod from our [releases page](https://github.com/Just3090/justsayori-mod/releases).
+*   The latest release of the Just Sayori mod from our [releases page](https://github.com/New-Traduction-Club/justsayori-mod/releases).
 
 ### 2. Installation Steps
 
@@ -19,11 +19,16 @@
 
 ### 3. Running the Mod
 
-To play, run `JustSayori.exe`. **Do not** run `DDLC.exe`, as that will not load the mod correctly.
+To play:
+
+*   On Windows, run `JustSayori.exe`.
+*   On Linux, run `JustSayori.sh`.
+
+**Do not** run `DDLC.exe`, as that will not load the mod correctly.
 
 ---
 
 ## Android Installation
 
-1.  Download the latest Android port `.apk` file. You can find it on the [releases page](https://github.com/Just3090/justsayori-mod/releases) or via [this direct link](https://link.traduction-club.live/7I8jSN).
+1.  Download the latest Android port `.apk` file. You can find it on the [releases page](https://github.com/New-Traduction-Club/justsayori-mod/releases) or via [this direct link](https://link.traduction-club.live/7I8jSN).
 2.  Install the `.apk` file on your Android device. You may need to enable installation from unknown sources in your device's settings depending of the app that you use.

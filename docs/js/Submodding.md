@@ -33,6 +33,11 @@ The above code will import a submod with this information:
 
 When creating dialogue submods, please try and adhere to the [Coding Style](./Coding-Style.md)
 
+## Reference
+
+*   **[Submod API Reference](./Submod-API-Reference.md)**: Signatures and examples for current public APIs (`Extras`, gifting, rooms, minigames, outfits, dialogue registration).
+*   **[Persistent Variables Reference](./Persistent-Variables.md)**: Key save variables used across systems.
+
 ## Submodding Guides
 
 Here are some guides to help you create your own submods:

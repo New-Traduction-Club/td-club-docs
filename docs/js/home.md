@@ -22,6 +22,8 @@ Want to add your own content or contribute to the project? These guides will hel
 
 *   **[Submodding](./Submodding.md)**: The starting point for creating your own content.
 *   **[Coding Style](./Coding-Style.md)**: Our conventions for writing clean and readable code.
+*   **[Submod API Reference](./Submod-API-Reference.md)**: Public APIs you can safely use from submods.
+*   **[Persistent Variables Reference](./Persistent-Variables.md)**: Key saved variables and where they are defined.
 
 ### Feature Guides
 
