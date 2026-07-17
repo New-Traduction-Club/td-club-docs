@@ -73,37 +73,45 @@ nav:
     - Persistent Variables: js/Persistent-Variables.md
     - Submodding: js/Submodding.md
     - Submodding API Reference: js/Submod-API-Reference.md
-  - Monika After Story (ES):
-    - Inicio: mas-es/Home.md
-    - API Keys: mas-es/API-Keys.md
-    - Adding Custom Backgrounds: mas-es/Adding-Custom-Backgrounds.md
-    - Adding Custom Music: mas-es/Adding-Custom-Music.md
-    - Adding Custom Piano Songs: mas-es/Adding-Custom-Piano-Songs.md
-    - Adding Sprite Objects: mas-es/Adding-Sprite-Objects.md
-    - All Features (SPOILERS): "mas-es/All-Features-[SPOILERS].md"
-    - Code of Conduct: mas-es/Code-of-Conduct.md
-    - Coding Style: mas-es/Coding-Style.md
-    - Community Piano Songs: mas-es/Community-Piano-Songs.md
-    - Contributing Guidelines: mas-es/Contributing-Guidelines.md
-    - Contributing New Greetings: mas-es/Contributing-new-greetings.md
-    - Credits: mas-es/Credits.md
-    - Decorators: mas-es/Decorators.md
-    - DelayedAction: mas-es/DelayedAction.md
-    - Dialogue Coding: mas-es/Dialogue-Coding.md
-    - External Content: mas-es/External-Content.md
-    - FAQ: mas-es/FAQ.md
-    - Frameworks: mas-es/Frameworks.md
-    - Gift Giving Guide: mas-es/Gift-Giving-Guide.md
-    - Init Pipeline: mas-es/Init-Pipeline.md
-    - Installation and Readme: mas-es/Installation-and-Readme.md
-    - Interfacing with the Submod Framework: mas-es/Interfacing-with-the-Submod-Framework.md
-    - License and Team Salvato Guidelines: mas-es/License-and-Team-Salvato-Guidelines.md
-    - Logs and Other Files: mas-es/Logs-and-Other-Files.md
-    - NOU Rules: mas-es/NOU-rules.md
-    - Official MAS Art PSDs and Guidelines: mas-es/Official-MAS-Art-PSDs-and-Guidelines.md
-    - Player Variables for Dialogue Coding: mas-es/Player-Variables-for-Dialogue-Coding.md
-    - Rules System: mas-es/Rules-System.md
-    - Testing Flow and Bug Testing: mas-es/Testing-Flow-and-Bug-Testing.md
-    - The Deco Framework for Backgrounds: mas-es/The-Deco-Framework-for-Backgrounds.md
-    - Troubleshooting: mas-es/Troubleshooting.md
-    - Using Parts of Monika After Story in Your Own Project: mas-es/Using-parts-of-Monika-After-Story-in-your-own-project.md
+  # - Monika After Story (ES):
+  #   - Inicio: mas-es/Home.md
+  #   - API Keys: mas-es/API-Keys.md
+  #   - Adding Custom Backgrounds: mas-es/Adding-Custom-Backgrounds.md
+  #   - Adding Custom Music: mas-es/Adding-Custom-Music.md
+  #   - Adding Custom Piano Songs: mas-es/Adding-Custom-Piano-Songs.md
+  #   - Adding Sprite Objects: mas-es/Adding-Sprite-Objects.md
+  #   - All Features (SPOILERS): "mas-es/All-Features-[SPOILERS].md"
+  #   - Code of Conduct: mas-es/Code-of-Conduct.md
+  #   - Coding Style: mas-es/Coding-Style.md
+  #   - Community Piano Songs: mas-es/Community-Piano-Songs.md
+  #   - Contributing Guidelines: mas-es/Contributing-Guidelines.md
+  #   - Contributing New Greetings: mas-es/Contributing-new-greetings.md
+  #   - Credits: mas-es/Credits.md
+  #   - Decorators: mas-es/Decorators.md
+  #   - DelayedAction: mas-es/DelayedAction.md
+  #   - Dialogue Coding: mas-es/Dialogue-Coding.md
+  #   - External Content: mas-es/External-Content.md
+  #   - FAQ: mas-es/FAQ.md
+  #   - Frameworks: mas-es/Frameworks.md
+  #   - Gift Giving Guide: mas-es/Gift-Giving-Guide.md
+  #   - Init Pipeline: mas-es/Init-Pipeline.md
+  #   - Installation and Readme: mas-es/Installation-and-Readme.md
+  #   - Interfacing with the Submod Framework: mas-es/Interfacing-with-the-Submod-Framework.md
+  #   - License and Team Salvato Guidelines: mas-es/License-and-Team-Salvato-Guidelines.md
+  #   - Logs and Other Files: mas-es/Logs-and-Other-Files.md
+  #   - NOU Rules: mas-es/NOU-rules.md
+  #   - Official MAS Art PSDs and Guidelines: mas-es/Official-MAS-Art-PSDs-and-Guidelines.md
+  #   - Player Variables for Dialogue Coding: mas-es/Player-Variables-for-Dialogue-Coding.md
+  #   - Rules System: mas-es/Rules-System.md
+  #   - Testing Flow and Bug Testing: mas-es/Testing-Flow-and-Bug-Testing.md
+  #   - The Deco Framework for Backgrounds: mas-es/The-Deco-Framework-for-Backgrounds.md
+  #   - Troubleshooting: mas-es/Troubleshooting.md
+  #   - Using Parts of Monika After Story in Your Own Project: mas-es/Using-parts-of-Monika-After-Story-in-your-own-project.md
+  - MASL 6.99:
+    - Home: masl-sixsixnine/home.md
+    - Virtual Desktop: masl-sixsixnine/Virtual-Desktop.md
+    - Experiments: masl-sixsixnine/Experiments.md
+    - Submods Compatibility: masl-sixsixnine/Submods-Compatibility.md
+  - Just Natsuki Launcher (JNL):
+    - Home: jnl/home.md
+    - How to pass my progress from older JN port to JNL: jnl/How-to-pass-JN-progress.md
