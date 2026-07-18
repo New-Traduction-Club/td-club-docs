@@ -24,3 +24,9 @@ Here are a few titles that we have tested:
     As official MAS, it will not be 100% compatible with Android. You can download the JN version used on [JNL](https://github.com/New-Traduction-Club/JustNatsuki-Android-port) and run it on MASL 6.99.
 - [Doki Doki Exit Music](https://dokimods.me/mods/exit-music)
 - [Doki Doki SNAFU](https://dokimods.me/mods/snafu/)
+
+## Saves location
+
+Rather than MAS installed with MASL, all extra games will save their `saves` folder in their own folder.
+
+For example, if you have DDLC on `DDLC-1.1.1-PC`, its `saves` folder will be `DDLC-1.1.1-PC/saves/`.
