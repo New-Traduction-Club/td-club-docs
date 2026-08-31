@@ -8,9 +8,10 @@ Here is a list of some compatible Submods with MASL 6.99, it can exist more and 
 
 Submods that require APIs, internet connection:
 
-- MAICA Text-to-Speech Submod (MTTS).
-- Submod Updater Plugin.
-- Autosave Submod.
+- MAICA Text-to-Speech Submod (MTTS)
+- [MAICA](./Maica.md)
+- Submod Updater Plugin
+- Autosave Submod
 
 Submods that modify the User Interface:
 

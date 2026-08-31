@@ -1,5 +1,5 @@
 site_name: Traduction Club Documentation
-site_description: Official documentation repository for internal tools, graphics engines, and other projects.
+site_description: Docs website.
 site_author: Traduction Club!
 
 repo_name: New-Traduction-Club/td-club-docs
@@ -112,6 +112,7 @@ nav:
     - Virtual Desktop: masl-sixsixnine/Virtual-Desktop.md
     - Experiments: masl-sixsixnine/Experiments.md
     - Submods Compatibility: masl-sixsixnine/Submods-Compatibility.md
+    - MAICA Compatibility: masl-sixsixnine/Maica.md
   - Just Natsuki Launcher (JNL):
     - Home: jnl/home.md
     - How to pass my progress from older JN port to JNL: jnl/How-to-pass-JN-progress.md
