@@ -1,0 +1,2530 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Docs website.">
+      
+      
+        <meta name="author" content="Traduction Club!">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="https://files.traduction-club.live/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Adding Sprite Objects - Traduction Club Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CFira+Code:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Fira Code"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/custom.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#indice" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Traduction Club Documentation" class="md-header__button md-logo" aria-label="Traduction Club Documentation" data-md-component="logo">
+      
+  <img src="https://files.traduction-club.live/favicon.ico" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Traduction Club Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Adding Sprite Objects
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/New-Traduction-Club/td-club-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    New-Traduction-Club/td-club-docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../js/home/" class="md-tabs__link">
+          
+  
+  
+  Just Sayori
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../masl-sixsixnine/home/" class="md-tabs__link">
+          
+  
+  
+  MASL 6.99
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../jnl/home/" class="md-tabs__link">
+          
+  
+  
+  Just Natsuki Launcher (JNL)
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Traduction Club Documentation" class="md-nav__button md-logo" aria-label="Traduction Club Documentation" data-md-component="logo">
+      
+  <img src="https://files.traduction-club.live/favicon.ico" alt="logo">
+
+    </a>
+    Traduction Club Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/New-Traduction-Club/td-club-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    New-Traduction-Club/td-club-docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Just Sayori
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Just Sayori
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../js/home/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../js/Backgrounds-System/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Custom Locations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../js/Coding-Style/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Coding Style
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../js/Data-Transfer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Transfer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../js/Gifting-System/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gifting System
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../js/Gifts-%28SPOILERS%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gifts (SPOILERS)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../js/Installing-the-mod/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installing the mod
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../js/Minigame-Hub/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Minigames System
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../js/Outfits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Outfits
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../js/Persistent-Variables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Persistent Variables
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../js/Submodding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Submodding
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../js/Submod-API-Reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Submodding API Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MASL 6.99
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    MASL 6.99
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../masl-sixsixnine/home/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../masl-sixsixnine/Virtual-Desktop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Virtual Desktop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../masl-sixsixnine/Experiments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Experiments
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../masl-sixsixnine/Submods-Compatibility/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Submods Compatibility
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../masl-sixsixnine/Maica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MAICA Compatibility
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Just Natsuki Launcher (JNL)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Just Natsuki Launcher (JNL)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jnl/home/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jnl/How-to-pass-JN-progress/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How to pass my progress from older JN port to JNL
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<p>La versión 0.9.4 introdujo la adición de sprites mediante archivos JSON.</p>
+<h1 id="indice">Índice</h1>
+<ol>
+<li><a href="./#instalar-sprite-packs">Instalar paquetes de sprites/arte</a></li>
+<li><a href="./#usar-sprite-packs-en-el-juego">Usar paquetes de sprites/arte en el juego</a></li>
+<li><a href="./#crear-sprite-packs">Crear paquetes de sprites/arte</a></li>
+<li><a href="./#formato-json">Formatos JSON</a></li>
+<li><a href="./#explicacion-de-objetos">Explicación de campos JSON</a></li>
+<li><a href="./#ubicaciones-de-archivos">Ubicaciones de archivos</a></li>
+<li><a href="./#puntos-prog">Puntos prog</a></li>
+<li><a href="./#reacciones-de-regalos">Reacciones de regalos</a></li>
+<li><a href="./#exprops-disponibles">Exprops disponibles</a></li>
+<li><a href="./#acstemplates">ACSTemplates</a></li>
+<li><a href="./#historial-de-versiones">Historial de versiones</a></li>
+</ol>
+<p><a id="instalar-sprite-packs"></a></p>
+<h1 id="instalar-paquetes-de-sprites">Instalar paquetes de sprites</h1>
+<p>Instalar estos paquetes de sprites en tu mod se hace igual que cuando instalaste el mod o cuando aplicas actualizaciones manuales.</p>
+<ol>
+<li>
+<p>Descarga el archivo ZIP del paquete de sprites desde la <a href="http://www.monikaafterstory.com/releases.html">página de lanzamientos</a> de MAS.</p>
+</li>
+<li>
+<p>El archivo ZIP contendrá carpetas con los nombres de los paquetes de sprites, y dentro de cada una habrá una carpeta llamada <code>mod_assets</code>. Solo tienes que copiar la carpeta <code>mod_assets</code> del paquete de sprites que quieras instalar <strong>con MAS cerrado</strong> y pegarla en la carpeta <code>game</code>, que está en el directorio raíz de tu instalación de MAS.</p>
+<ul>
+<li>En una instalación de Steam en cualquier sistema operativo, accede al directorio base haciendo clic derecho en el juego Doki Doki Literature Club en tu biblioteca de Steam, pulsa la opción <code>Properties</code>, luego la pestaña <code>Local Files</code> y después <code>Browse Local Files</code>.</li>
+<li>En Windows sin Steam, es la carpeta desde la que inicias el juego.</li>
+<li>En Mac sin Steam, dentro de tu instalación de MAS haz clic derecho en <code>DDLC.app</code> (puede que solo aparezca como <code>DDLC</code>) y pulsa <code>Show package Contents</code>; después navega a <code>Contents/Resources/autorun/</code></li>
+<li>En Android (MASL), entra a <em>Explorar Archivos Internos</em>.</li>
+</ul>
+</li>
+</ol>
+<p>Vídeo de ejemplo de la instalación <a href="https://www.youtube.com/watch?v=bjJ0U8l1m8c">aquí</a></p>
+<h2 id="solucion-de-problemas-de-instalacion">Solución de problemas de instalación</h2>
+<ol>
+<li>¿Copiaste la carpeta <code>mod_assets</code> del paquete de sprites que querías instalar dentro de <code>game/</code>? Es decir, <strong>no</strong> debería haber una carpeta como <code>author-spritepackname</code> dentro de <code>game/</code> ni de <code>mod_assets/</code>.<ol>
+<li><strong>SÍ</strong> - elimina la carpeta <code>author-spritepackname</code> de <code>game/</code> o <code>mod_assets/</code> y copia la carpeta <code>mod_assets</code> del paquete de sprites en tu <code>game/</code>; vuelve a intentar regalar.</li>
+<li><strong>NO</strong> - continúa con el paso 2.</li>
+</ol>
+</li>
+<li>¿<code>log/spj.log</code> muestra los sprites que querías regalar? (Consulta <a href="../FAQ/#how-to-view-your-log-files">aquí</a> si no sabes cómo revisar los logs)<ol>
+<li><strong>SÍ</strong> - continúa con el paso 3.</li>
+<li><strong>NO</strong> - verifica que has instalado correctamente el contenido de un paquete de sprites en <code>game/</code> y, si lo instalaste con MAS en ejecución, despídete y vuelve a abrir el juego.</li>
+</ol>
+</li>
+<li>¿<code>log/spj.log</code> contiene alguna línea con <code>ERROR</code>? Si ya lo hiciste y los sprites siguen sin aparecer en el registro, ve al paso 6.<ol>
+<li><strong>SÍ</strong> - verifica que has instalado correctamente el contenido de un paquete de sprites en <code>game/</code> e inténtalo de nuevo. Si ya lo hiciste y siguen apareciendo errores, ve al paso 6.</li>
+<li><strong>NO</strong> - continúa con el paso 4.</li>
+</ol>
+</li>
+<li>¿Estás añadiendo un paquete de sprites de peinados?<ol>
+<li><strong>SÍ</strong> - los peinados no se pueden regalar; deberían estar ya desbloqueados, salvo que quien haya creado el paquete de sprites use código personalizado para desbloquearlos. Puedes encontrar los peinados desbloqueados en <code>Hey, Monika... &gt; Appearance... &gt; Can you change your hairstyle?</code></li>
+<li><strong>NO</strong> - continúa con el paso 5.</li>
+</ol>
+</li>
+<li>¿Copiaste los archivos de la carpeta <code>gifts/</code> en tu carpeta <code>characters/</code>?<ol>
+<li><strong>SÍ</strong> - continúa con el paso 6.</li>
+<li><strong>NO</strong> - copia los archivos de la carpeta <code>gifts/</code> en tu carpeta <code>characters/</code>.</li>
+</ol>
+</li>
+<li>Crea una incidencia e incluye lo siguiente:<ul>
+<li>nombre del paquete de sprites que intentas instalar</li>
+<li>nombre del regalo que intentas dar</li>
+<li><code>log/spj.log</code> </li>
+</ul>
+</li>
+</ol>
+<p><a id="usar-sprite-packs-en-el-juego"></a></p>
+<h1 id="usar-paquetes-de-sprites-en-el-juego">Usar paquetes de sprites en el juego</h1>
+<p>Cada sprite de un paquete tiene un <code>giftname</code> asociado. Los archivos con los <code>giftname</code> adecuados están en la carpeta <code>gifts/</code> del paquete de sprites. <strong>NOTA: no todos los objetos de sprite se pueden desbloquear de esta manera.</strong></p>
+<p><a id="crear-sprite-packs"></a></p>
+<h1 id="crear-paquetes-de-sprites">Crear paquetes de sprites</h1>
+<p>Para crear paquetes de sprites solo hacen falta dos cosas: arte y JSON para describir cada sprite.</p>
+<p>El arte debe estar en el tamaño adecuado de 1280x850 (salvo la miniatura). Consulta <a href="./#ubicaciones-de-archivos">Ubicaciones de archivos</a> para saber dónde colocarlo.</p>
+<p>Los JSON deben seguir el formato que aparece más abajo. De nuevo, consulta <a href="./#ubicaciones-de-archivos">Ubicaciones de archivos</a> para saber dónde colocar el JSON.</p>
+<p>Y no lo olvides: <code>log/spj.log</code> es tu mejor aliado para depurar.</p>
+<h2 id="enviar-un-paquete-de-sprites">Enviar un paquete de sprites:</h2>
+<p>Requisitos para el envío:</p>
+<ul>
+<li>Incluye <a href="./#formato-json">JSON</a> para los sprites.</li>
+<li>La <a href="./#ubicaciones-de-archivos">estructura de carpetas del paquete de sprites</a> es correcta.</li>
+<li><strong>Debe</strong> cumplirse una de las siguientes condiciones:<ul>
+<li>el arte lo has creado tú</li>
+<li>el arte lo has encargado tú</li>
+<li>el arte te pertenece</li>
+<li>la persona creadora del arte te ha dado permiso explícito para crear un paquete de sprites</li>
+</ul>
+</li>
+</ul>
+<p><strong>Los paquetes de sprites enviados a la incidencia de sprite packs (#3765) no son aptos para añadirse a los paquetes de sprites oficiales.</strong> Para enviar algo a los paquetes de sprites oficiales, crea una incidencia. Ten en cuenta que tenemos la última palabra sobre el uso de sprites incluidos en los paquetes de sprites oficiales.</p>
+<h1 id="formato-json">Formato JSON</h1>
+<p><a id="acs-regular"></a></p>
+<h2 id="acs-normal">ACS (normal)</h2>
+<div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"id-of-sprite"</span><span class="p">,</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="nt">"img_sit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"base_filename_without_extension"</span><span class="p">,</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="nt">"pose_map"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">        </span><span class="nt">"default"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">        </span><span class="nt">"l_default"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5"</span><span class="p">,</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">        </span><span class="nt">"use_reg_for_l"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">        </span><span class="nt">"p1"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">        </span><span class="nt">"p2"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">        </span><span class="nt">"p3"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3"</span><span class="p">,</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">        </span><span class="nt">"p4"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4"</span><span class="p">,</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">        </span><span class="nt">"p5"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5"</span><span class="p">,</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">        </span><span class="nt">"p6"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6"</span><span class="p">,</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">        </span><span class="nt">"p7"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7"</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">    </span><span class="nt">"stay_on_start"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">    </span><span class="nt">"ex_props"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">        </span><span class="nt">"propname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"propvalue"</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">    </span><span class="nt">"select_info"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">        </span><span class="nt">"display_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"User Friendly Name"</span><span class="p">,</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">        </span><span class="nt">"thumb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"thumbnail_filename_without_extension"</span><span class="p">,</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">        </span><span class="nt">"group"</span><span class="p">:</span><span class="w"> </span><span class="s2">"id-of-selection-group"</span><span class="p">,</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">        </span><span class="nt">"visible_when_locked"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">        </span><span class="nt">"select_dlg"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="w">            </span><span class="s2">"list of dialogue to show when selected"</span>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="w">        </span><span class="p">]</span>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="w">    </span><span class="nt">"giftname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"gift_filename_without_extension"</span><span class="p">,</span>
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="w">    </span><span class="nt">"dryrun"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="w">    </span><span class="nt">"rec_layer"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="w">    </span><span class="nt">"priority"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span>
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="w">    </span><span class="nt">"acs_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"accessory-type"</span><span class="p">,</span>
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="w">    </span><span class="nt">"mux_type"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="w">        </span><span class="s2">"list-of-mutually-exclusive-types"</span>
+</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a><span class="w">    </span><span class="p">],</span>
+</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a><span class="w">    </span><span class="nt">"dlg_desc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user-friendly accessory name"</span><span class="p">,</span>
+</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a><span class="w">    </span><span class="nt">"dlg_plural"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a><span class="w">    </span><span class="nt">"keep_on_desk"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+</span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a><span class="p">}</span>
+</span></code></pre></div>
+<p><a id="acs-split"></a></p>
+<h2 id="acs-separado">ACS (separado)</h2>
+<div class="highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">{</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"id-of-sprite"</span><span class="p">,</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="nt">"img_sit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"base_filename_without_extension"</span><span class="p">,</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="nt">"pose_map"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">        </span><span class="nt">"default"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">        </span><span class="nt">"l_default"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5"</span><span class="p">,</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">        </span><span class="nt">"use_reg_for_l"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">        </span><span class="nt">"p1"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">        </span><span class="nt">"p2"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">        </span><span class="nt">"p3"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3"</span><span class="p">,</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">        </span><span class="nt">"p4"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4"</span><span class="p">,</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">        </span><span class="nt">"p5"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5"</span><span class="p">,</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">        </span><span class="nt">"p6"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6"</span><span class="p">,</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">        </span><span class="nt">"p7"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7"</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">    </span><span class="nt">"stay_on_start"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">    </span><span class="nt">"ex_props"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">        </span><span class="nt">"propname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"propvalue"</span>
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">    </span><span class="nt">"select_info"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="w">        </span><span class="nt">"display_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"User Friendly Name"</span><span class="p">,</span>
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="w">        </span><span class="nt">"thumb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"thumbnail_filename_without_extension"</span><span class="p">,</span>
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="w">        </span><span class="nt">"group"</span><span class="p">:</span><span class="w"> </span><span class="s2">"id-of-selection-group"</span><span class="p">,</span>
+</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="w">        </span><span class="nt">"visible_when_locked"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="w">        </span><span class="nt">"select_dlg"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="w">            </span><span class="s2">"list of dialogue to show when selected"</span>
+</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="w">        </span><span class="p">]</span>
+</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a><span class="w">    </span><span class="nt">"giftname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"gift_filename_without_extension"</span><span class="p">,</span>
+</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a><span class="w">    </span><span class="nt">"dryrun"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+</span><span id="__span-1-33"><a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a><span class="w">    </span><span class="nt">"rec_layer"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
+</span><span id="__span-1-34"><a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a><span class="w">    </span><span class="nt">"priority"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span>
+</span><span id="__span-1-35"><a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a><span class="w">    </span><span class="nt">"acs_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"accessory-type"</span><span class="p">,</span>
+</span><span id="__span-1-36"><a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a><span class="w">    </span><span class="nt">"mux_type"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-1-37"><a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a><span class="w">        </span><span class="s2">"list-of-mutually-exclusive-types"</span>
+</span><span id="__span-1-38"><a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a><span class="w">    </span><span class="p">],</span>
+</span><span id="__span-1-39"><a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a><span class="w">    </span><span class="nt">"arm_split"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-40"><a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a><span class="w">        </span><span class="nt">"default"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span>
+</span><span id="__span-1-41"><a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a><span class="w">        </span><span class="nt">"l_default"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5"</span><span class="p">,</span>
+</span><span id="__span-1-42"><a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a><span class="w">        </span><span class="nt">"use_reg_for_l"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+</span><span id="__span-1-43"><a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a><span class="w">        </span><span class="nt">"p1"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span>
+</span><span id="__span-1-44"><a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a><span class="w">        </span><span class="nt">"p2"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span>
+</span><span id="__span-1-45"><a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a><span class="w">        </span><span class="nt">"p3"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5"</span><span class="p">,</span>
+</span><span id="__span-1-46"><a id="__codelineno-1-46" name="__codelineno-1-46" href="#__codelineno-1-46"></a><span class="w">        </span><span class="nt">"p4"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10"</span><span class="p">,</span>
+</span><span id="__span-1-47"><a id="__codelineno-1-47" name="__codelineno-1-47" href="#__codelineno-1-47"></a><span class="w">        </span><span class="nt">"p5"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5^10"</span><span class="p">,</span>
+</span><span id="__span-1-48"><a id="__codelineno-1-48" name="__codelineno-1-48" href="#__codelineno-1-48"></a><span class="w">        </span><span class="nt">"p6"</span><span class="p">:</span><span class="w"> </span><span class="s2">"*"</span><span class="p">,</span>
+</span><span id="__span-1-49"><a id="__codelineno-1-49" name="__codelineno-1-49" href="#__codelineno-1-49"></a><span class="w">        </span><span class="nt">"p7"</span><span class="p">:</span><span class="w"> </span><span class="s2">"*"</span>
+</span><span id="__span-1-50"><a id="__codelineno-1-50" name="__codelineno-1-50" href="#__codelineno-1-50"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-1-51"><a id="__codelineno-1-51" name="__codelineno-1-51" href="#__codelineno-1-51"></a><span class="w">    </span><span class="nt">"dlg_desc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user-friendly accessory name"</span><span class="p">,</span>
+</span><span id="__span-1-52"><a id="__codelineno-1-52" name="__codelineno-1-52" href="#__codelineno-1-52"></a><span class="w">    </span><span class="nt">"dlg_plural"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+</span><span id="__span-1-53"><a id="__codelineno-1-53" name="__codelineno-1-53" href="#__codelineno-1-53"></a><span class="w">    </span><span class="nt">"keep_on_desk"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+</span><span id="__span-1-54"><a id="__codelineno-1-54" name="__codelineno-1-54" href="#__codelineno-1-54"></a><span class="p">}</span>
+</span></code></pre></div>
+<p><a id="hair"></a></p>
+<h2 id="peinado">Peinado</h2>
+<div class="highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">{</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"id-of-sprite"</span><span class="p">,</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="nt">"img_sit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"base_filename_without_extension"</span><span class="p">,</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="nt">"pose_map"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">        </span><span class="nt">"mpm_type"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">        </span><span class="nt">"default"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">        </span><span class="nt">"l_default"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">        </span><span class="nt">"use_reg_for_l"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">        </span><span class="nt">"p1"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">        </span><span class="nt">"p2"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">        </span><span class="nt">"p3"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">        </span><span class="nt">"p4"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">        </span><span class="nt">"p5"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">        </span><span class="nt">"p6"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="w">        </span><span class="nt">"p7"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="w">    </span><span class="nt">"mid_hair_map"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="w">        </span><span class="nt">"mpm_type"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="w">        </span><span class="nt">"default"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="w">        </span><span class="nt">"l_default"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a><span class="w">    </span><span class="nt">"stay_on_start"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+</span><span id="__span-2-25"><a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a><span class="w">    </span><span class="nt">"ex_props"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-26"><a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a><span class="w">        </span><span class="nt">"propname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"propvalue"</span>
+</span><span id="__span-2-27"><a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-2-28"><a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a><span class="w">    </span><span class="nt">"select_info"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-29"><a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a><span class="w">        </span><span class="nt">"display_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"User Friendly Name"</span><span class="p">,</span>
+</span><span id="__span-2-30"><a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a><span class="w">        </span><span class="nt">"thumb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"thumbnail_filename_without_extension"</span><span class="p">,</span>
+</span><span id="__span-2-31"><a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a><span class="w">        </span><span class="nt">"group"</span><span class="p">:</span><span class="w"> </span><span class="s2">"id-of-selection-group"</span><span class="p">,</span>
+</span><span id="__span-2-32"><a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a><span class="w">        </span><span class="nt">"visible_when_locked"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+</span><span id="__span-2-33"><a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a><span class="w">        </span><span class="nt">"select_dlg"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-2-34"><a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a><span class="w">            </span><span class="s2">"list of dialogue to show when selected"</span>
+</span><span id="__span-2-35"><a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a><span class="w">        </span><span class="p">]</span>
+</span><span id="__span-2-36"><a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-2-37"><a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a><span class="w">    </span><span class="nt">"unlock"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+</span><span id="__span-2-38"><a id="__codelineno-2-38" name="__codelineno-2-38" href="#__codelineno-2-38"></a><span class="w">    </span><span class="nt">"dryrun"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+</span><span id="__span-2-39"><a id="__codelineno-2-39" name="__codelineno-2-39" href="#__codelineno-2-39"></a><span class="p">}</span>
+</span></code></pre></div>
+<p><a id="clothes"></a></p>
+<h2 id="ropa">Ropa</h2>
+<div class="highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">{</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"id-of-sprite"</span><span class="p">,</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="nt">"img_sit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"base_filename_without_extension"</span><span class="p">,</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="nt">"pose_map"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">        </span><span class="nt">"mpm_type"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">        </span><span class="nt">"default"</span><span class="p">:</span><span class="w"> </span><span class="s2">"steepling"</span><span class="p">,</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">        </span><span class="nt">"l_default"</span><span class="p">:</span><span class="w"> </span><span class="s2">"def|def"</span><span class="p">,</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">        </span><span class="nt">"use_reg_for_l"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">        </span><span class="nt">"p1"</span><span class="p">:</span><span class="w"> </span><span class="s2">"steepling"</span><span class="p">,</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">        </span><span class="nt">"p2"</span><span class="p">:</span><span class="w"> </span><span class="s2">"crossed"</span><span class="p">,</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">        </span><span class="nt">"p3"</span><span class="p">:</span><span class="w"> </span><span class="s2">"restleftpointright"</span><span class="p">,</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">        </span><span class="nt">"p4"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pointright"</span><span class="p">,</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">        </span><span class="nt">"p5"</span><span class="p">:</span><span class="w"> </span><span class="s2">"steepling"</span><span class="p">,</span>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">        </span><span class="nt">"p6"</span><span class="p">:</span><span class="w"> </span><span class="s2">"down"</span>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">    </span><span class="nt">"stay_on_start"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="w">    </span><span class="nt">"ex_props"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="w">        </span><span class="nt">"propname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"propvalue"</span>
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="w">    </span><span class="nt">"select_info"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="w">        </span><span class="nt">"display_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"User Friendly Name"</span><span class="p">,</span>
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a><span class="w">        </span><span class="nt">"thumb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"thumbnail_filename_without_extension"</span><span class="p">,</span>
+</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a><span class="w">        </span><span class="nt">"group"</span><span class="p">:</span><span class="w"> </span><span class="s2">"id-of-selection-group"</span><span class="p">,</span>
+</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a><span class="w">        </span><span class="nt">"visible_when_locked"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+</span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a><span class="w">        </span><span class="nt">"hover_dlg"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a><span class="w">            </span><span class="s2">"list of dialogue to show when hovered"</span>
+</span><span id="__span-3-29"><a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a><span class="w">        </span><span class="p">],</span>
+</span><span id="__span-3-30"><a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a><span class="w">        </span><span class="nt">"select_dlg"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-3-31"><a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a><span class="w">            </span><span class="s2">"list of dialogue to show when selected"</span>
+</span><span id="__span-3-32"><a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a><span class="w">        </span><span class="p">],</span>
+</span><span id="__span-3-33"><a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-3-34"><a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a><span class="w">    </span><span class="nt">"giftname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"gift_filename_without_extension"</span><span class="p">,</span>
+</span><span id="__span-3-35"><a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a><span class="w">    </span><span class="nt">"dryrun"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+</span><span id="__span-3-36"><a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a><span class="w">    </span><span class="nt">"hair_map"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-37"><a id="__codelineno-3-37" name="__codelineno-3-37" href="#__codelineno-3-37"></a><span class="w">        </span><span class="nt">"all"</span><span class="p">:</span><span class="w"> </span><span class="s2">"def"</span><span class="p">,</span>
+</span><span id="__span-3-38"><a id="__codelineno-3-38" name="__codelineno-3-38" href="#__codelineno-3-38"></a><span class="w">        </span><span class="nt">"bun"</span><span class="p">:</span><span class="w"> </span><span class="s2">"def"</span>
+</span><span id="__span-3-39"><a id="__codelineno-3-39" name="__codelineno-3-39" href="#__codelineno-3-39"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-3-40"><a id="__codelineno-3-40" name="__codelineno-3-40" href="#__codelineno-3-40"></a><span class="w">    </span><span class="nt">"pose_arms"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-41"><a id="__codelineno-3-41" name="__codelineno-3-41" href="#__codelineno-3-41"></a><span class="w">        </span><span class="nt">"crossed"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-42"><a id="__codelineno-3-42" name="__codelineno-3-42" href="#__codelineno-3-42"></a><span class="w">            </span><span class="nt">"tag"</span><span class="p">:</span><span class="w"> </span><span class="s2">"crossed"</span><span class="p">,</span>
+</span><span id="__span-3-43"><a id="__codelineno-3-43" name="__codelineno-3-43" href="#__codelineno-3-43"></a><span class="w">            </span><span class="nt">"layers"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5^10"</span>
+</span><span id="__span-3-44"><a id="__codelineno-3-44" name="__codelineno-3-44" href="#__codelineno-3-44"></a><span class="w">        </span><span class="p">},</span>
+</span><span id="__span-3-45"><a id="__codelineno-3-45" name="__codelineno-3-45" href="#__codelineno-3-45"></a><span class="w">        </span><span class="nt">"left-down"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-46"><a id="__codelineno-3-46" name="__codelineno-3-46" href="#__codelineno-3-46"></a><span class="w">            </span><span class="nt">"tag"</span><span class="p">:</span><span class="w"> </span><span class="s2">"down"</span><span class="p">,</span>
+</span><span id="__span-3-47"><a id="__codelineno-3-47" name="__codelineno-3-47" href="#__codelineno-3-47"></a><span class="w">            </span><span class="nt">"layers"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span>
+</span><span id="__span-3-48"><a id="__codelineno-3-48" name="__codelineno-3-48" href="#__codelineno-3-48"></a><span class="w">        </span><span class="p">},</span>
+</span><span id="__span-3-49"><a id="__codelineno-3-49" name="__codelineno-3-49" href="#__codelineno-3-49"></a><span class="w">        </span><span class="nt">"left-rest"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-50"><a id="__codelineno-3-50" name="__codelineno-3-50" href="#__codelineno-3-50"></a><span class="w">            </span><span class="nt">"tag"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rest"</span><span class="p">,</span>
+</span><span id="__span-3-51"><a id="__codelineno-3-51" name="__codelineno-3-51" href="#__codelineno-3-51"></a><span class="w">            </span><span class="nt">"layers"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10"</span>
+</span><span id="__span-3-52"><a id="__codelineno-3-52" name="__codelineno-3-52" href="#__codelineno-3-52"></a><span class="w">        </span><span class="p">},</span>
+</span><span id="__span-3-53"><a id="__codelineno-3-53" name="__codelineno-3-53" href="#__codelineno-3-53"></a><span class="w">        </span><span class="nt">"right-down"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-54"><a id="__codelineno-3-54" name="__codelineno-3-54" href="#__codelineno-3-54"></a><span class="w">            </span><span class="nt">"tag"</span><span class="p">:</span><span class="w"> </span><span class="s2">"down"</span><span class="p">,</span>
+</span><span id="__span-3-55"><a id="__codelineno-3-55" name="__codelineno-3-55" href="#__codelineno-3-55"></a><span class="w">            </span><span class="nt">"layers"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span>
+</span><span id="__span-3-56"><a id="__codelineno-3-56" name="__codelineno-3-56" href="#__codelineno-3-56"></a><span class="w">        </span><span class="p">},</span>
+</span><span id="__span-3-57"><a id="__codelineno-3-57" name="__codelineno-3-57" href="#__codelineno-3-57"></a><span class="w">        </span><span class="nt">"right-point"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-58"><a id="__codelineno-3-58" name="__codelineno-3-58" href="#__codelineno-3-58"></a><span class="w">            </span><span class="nt">"tag"</span><span class="p">:</span><span class="w"> </span><span class="s2">"point"</span><span class="p">,</span>
+</span><span id="__span-3-59"><a id="__codelineno-3-59" name="__codelineno-3-59" href="#__codelineno-3-59"></a><span class="w">            </span><span class="nt">"layers"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span>
+</span><span id="__span-3-60"><a id="__codelineno-3-60" name="__codelineno-3-60" href="#__codelineno-3-60"></a><span class="w">        </span><span class="p">},</span>
+</span><span id="__span-3-61"><a id="__codelineno-3-61" name="__codelineno-3-61" href="#__codelineno-3-61"></a><span class="w">        </span><span class="nt">"right-restpoint"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-62"><a id="__codelineno-3-62" name="__codelineno-3-62" href="#__codelineno-3-62"></a><span class="w">            </span><span class="nt">"tag"</span><span class="p">:</span><span class="w"> </span><span class="s2">"restpoint"</span><span class="p">,</span>
+</span><span id="__span-3-63"><a id="__codelineno-3-63" name="__codelineno-3-63" href="#__codelineno-3-63"></a><span class="w">            </span><span class="nt">"layers"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10"</span>
+</span><span id="__span-3-64"><a id="__codelineno-3-64" name="__codelineno-3-64" href="#__codelineno-3-64"></a><span class="w">        </span><span class="p">},</span>
+</span><span id="__span-3-65"><a id="__codelineno-3-65" name="__codelineno-3-65" href="#__codelineno-3-65"></a><span class="w">        </span><span class="nt">"steepling"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-66"><a id="__codelineno-3-66" name="__codelineno-3-66" href="#__codelineno-3-66"></a><span class="w">            </span><span class="nt">"tag"</span><span class="p">:</span><span class="w"> </span><span class="s2">"steepling"</span><span class="p">,</span>
+</span><span id="__span-3-67"><a id="__codelineno-3-67" name="__codelineno-3-67" href="#__codelineno-3-67"></a><span class="w">            </span><span class="nt">"layers"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10"</span>
+</span><span id="__span-3-68"><a id="__codelineno-3-68" name="__codelineno-3-68" href="#__codelineno-3-68"></a><span class="w">        </span><span class="p">},</span>
+</span><span id="__span-3-69"><a id="__codelineno-3-69" name="__codelineno-3-69" href="#__codelineno-3-69"></a><span class="w">        </span><span class="nt">"def|left-def"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-70"><a id="__codelineno-3-70" name="__codelineno-3-70" href="#__codelineno-3-70"></a><span class="w">            </span><span class="nt">"tag"</span><span class="p">:</span><span class="w"> </span><span class="s2">"def"</span><span class="p">,</span>
+</span><span id="__span-3-71"><a id="__codelineno-3-71" name="__codelineno-3-71" href="#__codelineno-3-71"></a><span class="w">            </span><span class="nt">"layers"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10"</span>
+</span><span id="__span-3-72"><a id="__codelineno-3-72" name="__codelineno-3-72" href="#__codelineno-3-72"></a><span class="w">        </span><span class="p">},</span>
+</span><span id="__span-3-73"><a id="__codelineno-3-73" name="__codelineno-3-73" href="#__codelineno-3-73"></a><span class="w">        </span><span class="nt">"def|right-def"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-74"><a id="__codelineno-3-74" name="__codelineno-3-74" href="#__codelineno-3-74"></a><span class="w">            </span><span class="nt">"tag"</span><span class="p">:</span><span class="w"> </span><span class="s2">"def"</span><span class="p">,</span>
+</span><span id="__span-3-75"><a id="__codelineno-3-75" name="__codelineno-3-75" href="#__codelineno-3-75"></a><span class="w">            </span><span class="nt">"layers"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5^10"</span>
+</span><span id="__span-3-76"><a id="__codelineno-3-76" name="__codelineno-3-76" href="#__codelineno-3-76"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-3-77"><a id="__codelineno-3-77" name="__codelineno-3-77" href="#__codelineno-3-77"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-3-78"><a id="__codelineno-3-78" name="__codelineno-3-78" href="#__codelineno-3-78"></a><span class="w">    </span><span class="nt">"outfit_hair"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hair-sprite-ID"</span><span class="p">,</span>
+</span><span id="__span-3-79"><a id="__codelineno-3-79" name="__codelineno-3-79" href="#__codelineno-3-79"></a><span class="w">    </span><span class="nt">"outfit_acs"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-3-80"><a id="__codelineno-3-80" name="__codelineno-3-80" href="#__codelineno-3-80"></a><span class="w">        </span><span class="s2">"acs-ID"</span><span class="p">,</span>
+</span><span id="__span-3-81"><a id="__codelineno-3-81" name="__codelineno-3-81" href="#__codelineno-3-81"></a><span class="w">        </span><span class="s2">"another-acs-ID"</span>
+</span><span id="__span-3-82"><a id="__codelineno-3-82" name="__codelineno-3-82" href="#__codelineno-3-82"></a><span class="w">    </span><span class="p">]</span>
+</span><span id="__span-3-83"><a id="__codelineno-3-83" name="__codelineno-3-83" href="#__codelineno-3-83"></a><span class="p">}</span>
+</span></code></pre></div>
+<p><a id="highlights"></a></p>
+<h2 id="resaltados">Resaltados</h2>
+<p>Las capas de resaltado son una forma de añadir capas a un sprite que no se verán afectadas por el sistema de filtrado. Por ejemplo, pueden usarse para añadir brillo a un sprite durante la noche.</p>
+<p>Aquí tienes un ejemplo simplificado para añadir capas de resaltado a un ACS por la noche (solo se muestran las propiedades relevantes).
+<div class="highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">{</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"glowingacs"</span><span class="p">,</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="nt">"img_sit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"glowingacs"</span><span class="p">,</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="nt">"pose_map"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">        </span><span class="nt">"default"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">        </span><span class="nt">"l_default"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5"</span><span class="p">,</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">        </span><span class="nt">"p1"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">        </span><span class="nt">"p2"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">        </span><span class="nt">"p3"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">        </span><span class="nt">"p4"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">        </span><span class="nt">"p5"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5"</span><span class="p">,</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">        </span><span class="nt">"p6"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="w">        </span><span class="nt">"p7"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="w">    </span><span class="nt">"highlight"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="w">        </span><span class="nt">"mapping"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="w">            </span><span class="nt">"0"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="w">                </span><span class="nt">"night"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span>
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="w">            </span><span class="p">},</span>
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a><span class="w">            </span><span class="nt">"1"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a><span class="w">                </span><span class="nt">"night"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span>
+</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a><span class="w">            </span><span class="p">},</span>
+</span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a><span class="w">            </span><span class="nt">"2"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-26"><a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a><span class="w">                </span><span class="nt">"night"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span>
+</span><span id="__span-4-27"><a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a><span class="w">            </span><span class="p">},</span>
+</span><span id="__span-4-28"><a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a><span class="w">            </span><span class="nt">"5"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-29"><a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a><span class="w">                </span><span class="nt">"night"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5"</span>
+</span><span id="__span-4-30"><a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a><span class="w">            </span><span class="p">}</span>
+</span><span id="__span-4-31"><a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-4-32"><a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-4-33"><a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a><span class="p">}</span>
+</span></code></pre></div></p>
+<p>Este ejemplo asume lo siguiente:</p>
+<ul>
+<li>El ACS tiene imágenes que usan los códigos de pose 0, 1, 2 y 5.</li>
+<li>El ACS tiene capas de resaltado para esas imágenes.</li>
+</ul>
+<p>Los archivos y rutas resultantes para que esto coincida con este JSON son:</p>
+<ul>
+<li><code>glowingacs/0.png</code></li>
+<li><code>glowingacs/0-h0.png</code> - capa de resaltado que se aplica a cualquier pose que use el código de pose <code>0</code></li>
+<li><code>glowingacs/1.png</code></li>
+<li><code>glowingacs/1-h1.png</code> - capa de resaltado que se aplica a cualquier pose que use el código de pose <code>1</code></li>
+<li><code>glowingacs/2.png</code></li>
+<li><code>glowingacs/2-h2.png</code> - capa de resaltado que se aplica a cualquier pose que use el código de pose <code>2</code></li>
+<li><code>glowingacs/5.png</code></li>
+<li><code>glowingacs/5-h5.png</code> - capa de resaltado que se aplica a cualquier pose que use el código de pose <code>5</code></li>
+</ul>
+<p><strong>El código de resaltado NO tiene que coincidir con el código de pose.</strong> En el ejemplo se usa el mismo valor por comodidad organizativa. En general, las capas de resaltado solo necesitan llevar el sufijo <code>-h#</code>, donde <code>#</code> puede ser cualquier cadena.</p>
+<p>Además, <code>Clothes</code> y <code>Hair</code> tienen claves de mapeo distintas a las de ACS. Encontrarás más explicación en la sección <a href="#highlight-object">Objeto <code>Highlight</code></a>.</p>
+<p>Para saber dónde colocar la propiedad <code>highlight</code>, consulta la sección <a href="#object-explanation">Explicación de objetos</a> más abajo.</p>
+<p><a id="object-explanation"></a>
+<a id="explicacion-de-objetos"></a></p>
+<h2 id="explicacion-de-objetos">Explicación de objetos:</h2>
+<h3 id="pares-nombrevalor-comunes">Pares nombre/valor comunes:</h3>
+<p>Estas propiedades se aplican a todos los objetos de sprite.</p>
+<ul>
+<li><code>version</code>: (<code>int</code>) versión de este sprite<ul>
+<li><strong>obligatorio</strong></li>
+<li>usa la versión 4 si las imágenes siguen el formato basado en carpetas; consulta <a href="#version-4-file-locations-v01216">Ubicaciones de archivos de la versión 4</a><ul>
+<li><strong>Usa este formato en adelante (v0.12.16+); es mucho mejor para la organización.</strong></li>
+</ul>
+</li>
+<li>usa la versión 3 si las imágenes siguen el formato basado en nombre de archivo; consulta <a href="#version-3-file-locations-v0110-v01215">Ubicaciones de archivos de la versión 3</a><ul>
+<li>solo es compatible en v0.11.0+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>type</code>: (<code>int</code>) tipo de este sprite<ul>
+<li><strong>obligatorio</strong></li>
+<li>Debe ser uno de los siguientes valores:<ul>
+<li>0 - ACS</li>
+<li>1 - <code>Hair</code></li>
+<li>2 - <code>Clothes</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>name</code>: (<code>string</code>) nombre de este sprite<ul>
+<li><strong>obligatorio</strong></li>
+<li><strong>debe ser único dentro del tipo de sprite</strong></li>
+<li>Se usa como identificador de este sprite.</li>
+</ul>
+</li>
+<li><code>img_sit</code>: (<code>string</code>) nombre de archivo para la posición sentada de este sprite<ul>
+<li><strong>obligatorio</strong></li>
+<li><strong>No</strong> incluyas la extensión del archivo.</li>
+<li><strong>No</strong> incluyas la ruta del archivo.</li>
+</ul>
+</li>
+<li><code>pose_map</code>: (<code>object</code>) <a href="#posemap-object">Objeto PoseMap</a><ul>
+<li><strong>obligatorio</strong></li>
+<li>su uso varía según el tipo de sprite. Consulta <a href="#posemap-object">aquí</a> para más información.</li>
+</ul>
+</li>
+<li><code>stay_on_start</code>: (<code>boolean</code>) determina si Monika debe seguir llevando el objeto de sprite tras reiniciar<ul>
+<li><em>opcional</em></li>
+<li><code>True</code> permite que Monika siga llevando el sprite tras reiniciar. <code>False</code> elimina el sprite al salir.</li>
+<li>Valor por defecto: <code>false</code></li>
+</ul>
+</li>
+<li><code>ex_props</code>: (<code>object</code>) diccionario de propiedades arbitrarias<ul>
+<li><em>opcional</em></li>
+<li>Permite asignar propiedades arbitrarias a este objeto de sprite.</li>
+<li>Es como ponerle "etiquetas" al objeto de sprite.</li>
+<li><strong>Las claves deben ser cadenas (<code>string</code>).</strong></li>
+<li><strong>Los valores deben ser <code>string</code>, <code>int</code> o <code>bool</code>.</strong></li>
+<li><a href="./#available-exprops">Exprops disponibles</a></li>
+<li>Valor por defecto: <code>objeto vacío</code></li>
+</ul>
+</li>
+<li><code>select_info</code>: (<code>object</code>) <a href="#selectable-object">Objeto Selectable</a><ul>
+<li><em>opcional</em></li>
+<li>Permite que el objeto de sprite sea seleccionable mediante un selector. Consulta <a href="#selectable-object">aquí</a> para más información.</li>
+<li>Valor por defecto: <code>objeto vacío</code></li>
+</ul>
+</li>
+<li><code>highlight</code>: (<code>object</code>) <a href="#highlight-object">Objeto <code>Highlight</code></a> o <a href="#highlightsplit-object">Objeto <code>HighlightSplit</code></a> si es un ACS dividido (<code>Split ACS</code>)<ul>
+<li><em>opcional</em></li>
+<li>los resaltados son capas añadidas a sprites que ignoran el sistema de filtrado</li>
+<li>los ACS con <code>arm_split</code> configurado deben usar <a href="#highlightsplit-object">objetos <code>HighlightSplit</code></a></li>
+</ul>
+</li>
+<li><code>dryrun</code>: (<code>any</code>) clave de metadatos que habilita el modo dryrun<ul>
+<li><em>opcional</em></li>
+<li>Si se proporciona, el objeto de sprite <strong>no</strong> se añadirá formalmente a la base de datos, pero se comprobará en busca de errores/advertencias (es decir, una ejecución de prueba).</li>
+<li>El valor no importa.</li>
+</ul>
+</li>
+</ul>
+<p><a id="acs-specific"></a></p>
+<h3 id="especifico-de-acs">Específico de ACS</h3>
+<p>Estas propiedades son solo para sprites ACS.</p>
+<ul>
+<li><code>rec_layer</code>: (<code>int</code>) capa deseada para este ACS<ul>
+<li><em>opcional</em></li>
+<li>Debe ser uno de los siguientes valores:<ul>
+<li>0 - antes del cuerpo (<code>PRE_ACS</code>)</li>
+<li>1 - entre las expresiones faciales y los brazos (<code>MID_ACS</code>)</li>
+<li>2 - después de los brazos (<code>PST_ACS</code>)</li>
+<li>3 - entre el pelo trasero y el cuerpo (<code>BBH_ACS</code>)</li>
+<li>4 - entre el cuerpo y el pelo delantero (<code>BFH_ACS</code>)</li>
+<li>5 - entre el pelo delantero y las expresiones faciales (<code>AFH_ACS</code>)</li>
+<li>6 - entre el cuerpo y los brazos traseros (<code>BBA_ACS</code>)</li>
+<li>7 - entre los brazos intermedios y el pecho (<code>MAB_ACS</code>)</li>
+<li>8 - entre el cuerpo base y la ropa (<code>BSE_ACS</code>)</li>
+<li>9 - entre los brazos base y la ropa (<code>ASE_ACS</code>)</li>
+<li>10 - entre el pelo medio y la mesa (<code>BAT_ACS</code>)</li>
+<li>11 - entre los brazos intermedios y la mesa (<code>MAT_ACS</code>)</li>
+<li>12 - entre los brazos traseros y el pelo medio (<code>BMH_ACS</code>)</li>
+<li>13 - entre el pelo medio y la cabeza (<code>MMH_ACS</code>)</li>
+</ul>
+</li>
+<li>Esto hará que el ACS se renderice solo en esta capa.</li>
+<li>Valor por defecto: <code>2</code> (<code>PST_ACS</code>)</li>
+</ul>
+</li>
+<li><code>priority</code>: (<code>int</code>) prioridad de renderizado<ul>
+<li><em>opcional</em></li>
+<li>Los valores más bajos se renderizan primero</li>
+<li>Valor por defecto: <code>10</code></li>
+</ul>
+</li>
+<li><code>acs_type</code>: (<code>string</code>) tipo de este ACS<ul>
+<li><em>opcional</em></li>
+<li>Se usa con <code>mux_type</code> para determinar automáticamente qué ACS quitar al intentar ponerse este ACS.</li>
+<li>En general, esto debería usarse si prevés múltiples versiones de un ACS similar (lazos, tazas).</li>
+<li>Si necesitas algo parecido a "etiquetas", usa <code>ex_props</code> en su lugar.</li>
+<li>También se usa con el sistema <code>ACSTemplate</code> para aplicar valores por defecto a ciertas propiedades. Consulta <a href="#acstemplates">ACSTemplates</a> para más información.</li>
+<li>Valor por defecto: <code>None</code></li>
+</ul>
+</li>
+<li><code>mux_type</code>: (<code>list of strings</code>) lista de tipos de ACS con los que este ACS entra en conflicto<ul>
+<li><em>opcional</em></li>
+<li>Se usa con <code>acs_type</code> para determinar automáticamente qué ACS quitar al intentar ponerse este ACS.</li>
+<li>Los ACS con tipos incluidos aquí se <strong>eliminarán</strong> al intentar ponerse este ACS.</li>
+<li>Valor por defecto: <code>None</code></li>
+</ul>
+</li>
+<li><code>giftname</code>: (<code>string</code>) nombre de archivo del regalo asociado al sprite<ul>
+<li><em>opcional</em></li>
+<li>Proporcionar <code>giftname</code> permite regalarle este sprite a Monika.</li>
+<li><strong>No</strong> incluyas la extensión del archivo.</li>
+<li><strong>No</strong> incluyas la ruta del archivo.</li>
+<li><strong>Si no se proporciona, el sprite no se podrá desbloquear mediante regalos y, por tanto, no será desbloqueable con el sistema estándar.</strong> Los sprites aún pueden desbloquearse por programación.</li>
+<li>Valor por defecto: <code>None</code></li>
+</ul>
+</li>
+<li><code>arm_split</code>: (<code>object</code>) <a href="#posemap-object">Objeto PoseMap</a><ul>
+<li><strong>obligatorio</strong> si <code>rec_layer</code> es 8 (BSE) o 9 (ASE). En otros casos se ignora</li>
+<li>cada valor debe ser una cadena (<code>string</code>). Consulta <a href="#posemap-object">Objeto <code>PoseMap</code></a> para obtener más información.</li>
+<li>si se omite, se creará un ACS normal</li>
+</ul>
+</li>
+<li><code>dlg_desc</code>: (<code>string</code>) nombre amigable del accesorio para usar en diálogos<ul>
+<li><em>opcional</em></li>
+<li>Se usa en los diálogos al referirse al accesorio.</li>
+<li>Debe estar en minúsculas.</li>
+<li>Debe proporcionarse junto con <code>dlg_plural</code></li>
+</ul>
+</li>
+<li><code>dlg_plural</code>: (<code>boolean</code>) determina si <code>dlg_desc</code> debe usarse con adjetivos/adverbios en plural o singular<ul>
+<li><em>opcional</em></li>
+<li>Se usa en los diálogos al referirse al accesorio.</li>
+<li>Debe proporcionarse junto con <code>dlg_desc</code></li>
+</ul>
+</li>
+<li><code>keep_on_desk</code>: (<code>boolean</code>) determina si este ACS debe quedarse en el escritorio cuando Monika no está en el escritorio<ul>
+<li><em>opcional</em></li>
+<li>Valor por defecto: <code>false</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="especifico-de-hair">Específico de <code>Hair</code></h3>
+<p>Estas propiedades son solo para sprites <code>Hair</code>.</p>
+<ul>
+<li><code>unlock</code>: (<code>boolean</code>) determina si este sprite debe desbloquearse automáticamente o no<ul>
+<li><em>opcional</em></li>
+<li><code>True</code> significa que el sprite de peinado se desbloquea automáticamente. <code>False</code> significa que no se desbloquea automáticamente.</li>
+<li><strong>Si es <code>False</code>, el sprite solo puede desbloquearse por programación.</strong></li>
+<li>Valor por defecto: <code>true</code></li>
+</ul>
+</li>
+<li><code>mid_hair_map</code>: (<code>object</code>) <a href="#posemap-object">Objeto <code>PoseMap</code></a><ul>
+<li><em>opcional</em></li>
+<li>Permite capas de pelo entre el cuerpo y la cabeza (<code>mid</code>). Consulta <a href="https://github.com/Monika-After-Story/MonikaModDev/pull/7148">#7148</a>.</li>
+<li>Valor por defecto: <code>None</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="especifico-de-clothes">Específico de <code>Clothes</code></h3>
+<p>Estas propiedades son solo para sprites <code>Clothes</code>.</p>
+<ul>
+<li><code>hair_map</code>: (<code>object</code>) diccionario que mapea peinados a otros peinados<ul>
+<li><em>opcional</em></li>
+<li>Permite reemplazar peinados por otros peinados al llevar esta ropa.</li>
+<li><strong>Las claves deben ser cadenas (<code>string</code>).</strong> Deben ser IDs de sprites <code>Hair</code> (excepto <code>all</code>).</li>
+<li><strong>Los valores deben ser cadenas (<code>string</code>).</strong> Deben ser IDs de sprites <code>Hair</code>.</li>
+<li>Usar la clave <code>all</code> establecerá una sustitución de peinado predeterminada. Si no se establece explícitamente, se usará <code>def</code> (el peinado de coleta por defecto)</li>
+<li><strong>NOTA:</strong> El modo dryrun <strong>no</strong> detectará claves/valores que <strong>no existan</strong>. En su lugar, se registran advertencias y se modifican propiedades para evitar fallos.</li>
+</ul>
+</li>
+<li><code>giftname</code>: (<code>string</code>) igual que <code>giftname</code> en <a href="#acs-specific">sprites ACS</a><ul>
+<li>Igual que <code>giftname</code> en <a href="#acs-specific">sprites ACS</a></li>
+</ul>
+</li>
+<li><code>pose_arms</code>: (<code>object</code>) <a href="#posearms-object">Objeto <code>PoseArms</code></a><ul>
+<li><em>opcional</em></li>
+<li>Si no se proporciona, se usan los <code>pose_arms</code> definidos internamente que siguen los sprites base.</li>
+</ul>
+</li>
+<li><code>outfit_hair</code>: (<code>string</code>) peinado que combina con esta ropa para un conjunto<ul>
+<li><em>opcional</em></li>
+<li>Debe ser el ID de un sprite <code>Hair</code>.</li>
+</ul>
+</li>
+<li><code>outfit_acs</code>: (<code>list of strings</code>) lista de ACS que combinan con esta ropa para un conjunto<ul>
+<li><em>opcional</em></li>
+<li>Cada string debe ser el ID de un ACS.</li>
+</ul>
+</li>
+</ul>
+<p><a id="posemap-object"></a></p>
+<h3 id="objeto-posemap">Objeto <code>PoseMap</code></h3>
+<p>Estas propiedades son para objetos <code>PoseMap</code>.</p>
+<ul>
+<li><code>mpm_type</code>: (<code>int</code>) tipo de este mapa de poses<ul>
+<li><strong>obligatorio</strong> para <code>pose_map</code> en <code>Hair</code> y <code>Clothes</code></li>
+<li><em>opcional</em> para otras propiedades</li>
+<li>Para <code>pose_map</code> en <code>Hair</code> y <code>Clothes</code>, debe establecerse en uno de los siguientes valores:<ul>
+<li>0 - si <code>pose_map</code> debe tratarse en modo activar/desactivar</li>
+<li>1 - si <code>pose_map</code> debe tratarse en modo de reserva (<code>fallback</code>)</li>
+</ul>
+</li>
+<li>Para ACS y todas las demás propiedades, esto se sobrescribirá internamente con el tipo correcto.</li>
+<li>Valor por defecto: definido internamente</li>
+</ul>
+</li>
+<li><code>default</code>: (<code>boolean | string | object</code>) valor que se usará por defecto para todas las poses no inclinadas<ul>
+<li><em>opcional</em></li>
+<li>Valor por defecto: <code>None</code></li>
+</ul>
+</li>
+<li><code>l_default</code>: (<code>boolean | string | object</code>) valor que se usará por defecto para todas las poses inclinadas<ul>
+<li><em>opcional</em></li>
+<li>Valor por defecto: <code>None</code></li>
+</ul>
+</li>
+<li><code>use_reg_for_l</code>: (<code>boolean</code>) determina si los valores por defecto de poses inclinadas deben usar los valores por defecto normales<ul>
+<li><em>opcional</em></li>
+<li><code>True</code> usará <code>default</code> en lugar de <code>l_default</code> en las situaciones correspondientes. <code>False</code> tratará ambos valores por separado.</li>
+<li>Valor por defecto: <code>False</code></li>
+</ul>
+</li>
+<li><code>p1</code>: (<code>boolean | string | object</code>) valor a usar para la pose 1<ul>
+<li><em>opcional</em></li>
+<li>Es la pose "steepling".</li>
+<li>Valor por defecto: <code>None</code></li>
+</ul>
+</li>
+<li><code>p2</code>: (<code>boolean | string | object</code>) valor a usar para la pose 2<ul>
+<li><em>opcional</em></li>
+<li>Es la pose "crossed".</li>
+<li>Valor por defecto: <code>None</code></li>
+</ul>
+</li>
+<li><code>p3</code>: (<code>boolean | string | object</code>) valor a usar para la pose 3<ul>
+<li><em>opcional</em></li>
+<li>Es la pose "restleftpointright".</li>
+<li>Valor por defecto: <code>None</code></li>
+</ul>
+</li>
+<li><code>p4</code>: (<code>boolean | string | object</code>) valor a usar para la pose 4<ul>
+<li><em>opcional</em></li>
+<li>Es la pose "pointright".</li>
+<li>Valor por defecto: <code>None</code></li>
+</ul>
+</li>
+<li><code>p5</code>: (<code>boolean | string | object</code>) valor a usar para la pose 5<ul>
+<li><em>opcional</em></li>
+<li>Es la pose "lean|def".</li>
+<li>Valor por defecto: <code>None</code></li>
+</ul>
+</li>
+<li><code>p6</code>: (<code>boolean | string | object</code>) valor a usar para la pose 6<ul>
+<li><em>opcional</em></li>
+<li>Es la pose "down".</li>
+<li>Valor por defecto: <code>None</code></li>
+</ul>
+</li>
+<li><code>p7</code>: (<code>boolean | string | object</code>) valor a usar para la pose 7<ul>
+<li><em>opcional</em></li>
+<li>Es la pose "downleftpointright"</li>
+<li>Valor por defecto: <code>None</code></li>
+</ul>
+</li>
+</ul>
+<p>Muchos de los valores (excepto <code>use_reg_for_l</code>) cambian según el tipo de sprite:</p>
+<ul>
+<li>ACS:<ul>
+<li><code>pose_map</code> - cada valor debe ser una cadena (<code>string</code>) que indique el código de imagen que se va a usar. Por ejemplo, si se establece en "0", se asume que el ACS tiene una imagen como <code>acs-mug-0.png</code></li>
+<li><code>arm_split</code> - solo se usa si el <code>rec_layer</code> del ACS es ASE o BSE. Cada valor debe ser una cadena (<code>string</code>) delimitada por carets (<code>^</code>) como <code>5^10</code>. Códigos de capa disponibles:<ul>
+<li>"0" - este ACS tiene una capa body-0 o arms-0 (<code>acs-mug-0-0.png</code>) para esta pose</li>
+<li>"1" - este ACS tiene una capa body-1 (<code>acs-mug-0-1.png</code>) para esta pose</li>
+<li>"5" - este ACS tiene una capa arms-5 (<code>acs-mug-0-5.png</code>) para esta pose</li>
+<li>"10" - este ACS tiene una capa arms-10 (<code>acs-mug-0-10.png</code>) para esta pose</li>
+<li>"" - este ACS no tiene capas para esta pose (no se renderiza)</li>
+<li>"*" - este ACS tiene todas las capas para esta pose</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>Hair</code>:<ul>
+<li><code>pose_map</code> - cada valor debe ser un booleano o una cadena (<code>string</code>), según <code>mpm_type</code><ul>
+<li>si <code>mpm_type</code> es 0, cada valor debe ser un booleano. <code>True</code> indica que la pose debe estar habilitada; <code>False</code>, que debe estar deshabilitada.</li>
+<li>si <code>mpm_type</code> es 1, cada valor debe ser una pose en formato <code>string</code> (ver abajo). Esa pose se usa en lugar de la pose real.</li>
+</ul>
+</li>
+<li><code>mid_hair_map</code> - cada valor debe ser un booleano. <code>True</code> indica que la pose tiene una capa de pelo <code>mid</code>; <code>False</code>, que no la tiene.</li>
+</ul>
+</li>
+<li><code>Clothes</code>:<ul>
+<li><code>pose_map</code> - mismas reglas que <code>Hair</code>.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Poses disponibles:</strong></p>
+<ul>
+<li><code>steepling</code> - pose original de DDLC</li>
+<li><code>crossed</code> - brazos cruzados</li>
+<li><code>restleftpointright</code> - steepling, excepto que la mano derecha apunta a la derecha</li>
+<li><code>pointright</code> - el brazo izquierdo está abajo y el derecho se extiende mucho hacia la derecha y señala a la derecha</li>
+<li><code>down</code> - ambos brazos abajo</li>
+<li><code>downleftpointright</code> - el brazo izquierdo está abajo y el derecho está en reposo apuntando a la derecha</li>
+<li><code>def|def</code> - inclinación por defecto con brazos por defecto</li>
+</ul>
+<p><a id="selectable-object"></a></p>
+<h3 id="objeto-selectable">Objeto <code>Selectable</code></h3>
+<p>Estas propiedades son para objetos <code>Selectable</code> (<code>select_info</code>).</p>
+<ul>
+<li><code>display_name</code>: (<code>string</code>) nombre amigable de este sprite<ul>
+<li><strong>obligatorio</strong></li>
+<li>Esto se muestra al usuario en los menús de selección.</li>
+</ul>
+</li>
+<li><code>thumb</code>: (<code>string</code>) nombre de archivo de la miniatura de este sprite<ul>
+<li><strong>obligatorio</strong></li>
+<li>Esto se muestra al usuario como miniatura en los menús de selección.</li>
+</ul>
+</li>
+<li><code>group</code>: (<code>string</code>) ID del grupo al que debe asociarse este elemento seleccionable<ul>
+<li><strong>obligatorio</strong></li>
+<li>Se usa para agrupar elementos seleccionables, de modo que los sprites relacionados puedan elegirse en el menú de selección adecuado.</li>
+</ul>
+</li>
+<li><code>visible_when_locked</code>: (<code>boolean</code>) determina si el sprite debe verse en el menú de selección incluso estando bloqueado<ul>
+<li><em>opcional</em></li>
+<li><code>True</code> permitirá que el sprite aparezca en el menú de selección cuando esté bloqueado. <code>False</code> hará que solo aparezca cuando esté desbloqueado.</li>
+<li>Valor por defecto: <code>True</code></li>
+</ul>
+</li>
+<li><code>select_dlg</code>: (<code>list of strings</code>) lista de líneas que Monika debe decir cuando este sprite ha sido seleccionado<ul>
+<li><em>opcional</em></li>
+<li>Cada string se trata como un mensaje independiente, elegido de forma aleatoria.</li>
+<li>Hay soporte para sustituciones (es decir, usando corchetes), pero se limita a variables globales.</li>
+<li>La expresión <strong>no</strong> se puede ajustar por línea. En general, se usa <code>1eua</code>.</li>
+<li>Cuando el sprite ha sido "seleccionado", Monika pasa a llevar ese sprite.</li>
+<li>Valor por defecto: <code>None</code></li>
+</ul>
+</li>
+</ul>
+<p><a id="posearms-object"></a></p>
+<h3 id="objeto-posearms">Objeto <code>PoseArms</code></h3>
+<p>Este es un mapeo de todos los brazos disponibles.
+Si se omite algún brazo, significa que no se debe mostrar ninguna capa para ese brazo.
+Un objeto vacío significa que esta ropa no tiene capas de brazo.</p>
+<ul>
+<li><code>crossed</code>: (<code>object</code>) <a href="#posearm-object">Objeto <code>PoseArm</code></a><ul>
+<li><em>opcional</em></li>
+<li>datos de pose de brazo para brazos cruzados</li>
+</ul>
+</li>
+<li><code>left-down</code>: (<code>object</code>) <a href="#posearm-object">Objeto <code>PoseArm</code></a><ul>
+<li><em>opcional</em></li>
+<li>datos de pose de brazo para el brazo izquierdo abajo</li>
+</ul>
+</li>
+<li><code>left-rest</code>: (<code>object</code>) <a href="#posearm-object">Objeto <code>PoseArm</code></a><ul>
+<li><em>opcional</em></li>
+<li>datos de pose de brazo para el brazo izquierdo en reposo</li>
+</ul>
+</li>
+<li><code>right-down</code>: (<code>object</code>) <a href="#posearm-object">Objeto <code>PoseArm</code></a><ul>
+<li><em>opcional</em></li>
+<li>datos de pose de brazo para el brazo derecho abajo</li>
+</ul>
+</li>
+<li><code>right-point</code>: (<code>object</code>) <a href="#posearm-object">Objeto <code>PoseArm</code></a><ul>
+<li><em>opcional</em></li>
+<li>datos de pose de brazo para el brazo derecho señalando</li>
+</ul>
+</li>
+<li><code>right-restpoint</code>: (<code>object</code>) <a href="#posearm-object">Objeto <code>PoseArm</code></a><ul>
+<li><em>opcional</em></li>
+<li>datos de pose de brazo para el brazo derecho en reposo señalando</li>
+</ul>
+</li>
+<li><code>steepling</code>: (<code>object</code>) <a href="#posearm-object">Objeto <code>PoseArm</code></a><ul>
+<li><em>opcional</em></li>
+<li>datos de pose de brazo para brazos steepling</li>
+</ul>
+</li>
+<li><code>def|left-def</code>: (<code>object</code>) <a href="#posearm-object">Objeto <code>PoseArm</code></a><ul>
+<li><em>opcional</em></li>
+<li>datos de pose de brazo para el brazo inclinado-def-left-def</li>
+</ul>
+</li>
+<li><code>def|right-def</code>: (<code>object</code>) <a href="#posearm-object">Objeto <code>PoseArm</code></a><ul>
+<li><em>opcional</em></li>
+<li>datos de pose de brazo para el brazo inclinado-def-right-def</li>
+</ul>
+</li>
+</ul>
+<p><a id="posearm-object"></a></p>
+<h3 id="objeto-posearm">Objeto <code>PoseArm</code></h3>
+<p>Representación de un único brazo.</p>
+<ul>
+<li><code>tag</code>: (<code>string</code>) nombre de la cadena de brazo que se usará al renderizar este brazo<ul>
+<li><strong>obligatorio</strong></li>
+<li>se usa en formatos como <code>arms-&lt;tag&gt;</code> o <code>arms-left/right-&lt;tag&gt;</code></li>
+</ul>
+</li>
+<li><code>layers</code>: (<code>string</code>) cadena delimitada por carets (^) que indica capas para este brazo<ul>
+<li><strong>obligatorio</strong></li>
+<li>valores aceptables:<ul>
+<li>"*" - este brazo existe en todas las capas</li>
+<li>"0" - este brazo existe en la capa 0</li>
+<li>"5" - este brazo existe en la capa 5</li>
+<li>"10" - este brazo existe en la capa 10</li>
+<li>"" - este brazo no existe en ninguna capa</li>
+</ul>
+</li>
+<li>la cadena delimitada debería verse así: <code>5^10</code></li>
+</ul>
+</li>
+<li><code>highlight</code>: (<code>object</code>) <a href="#highlight-object">Objeto <code>Highlight</code></a><ul>
+<li><em>opcional</em></li>
+<li>resaltados que se usarán para este brazo</li>
+</ul>
+</li>
+</ul>
+<p><a id="highlightsplit-object"></a></p>
+<h3 id="objeto-highlightsplit">Objeto <code>HighlightSplit</code></h3>
+<p>Los objetos <code>HighlightSplit</code> son solo para <code>Split ACS</code>. Las claves deben ser las mismas que los valores usados en <code>pose_map</code>. Los valores deben ser <a href="#highlight-object">objetos <code>Highlight</code></a>, donde las claves sean las listadas más abajo para <code>HighlightSplit</code>. Estas también deben ser las mismas que se usen para <code>arm_split</code>.</p>
+<p>Aquí tienes un ejemplo abreviado:
+<div class="highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="p">{</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="nt">"pose_map"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">        </span><span class="nt">"p1"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">        </span><span class="nt">"p2"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">        </span><span class="nt">"p7"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7"</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">    </span><span class="nt">"arm_split"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">        </span><span class="nt">"p1"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10"</span><span class="p">,</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">        </span><span class="nt">"p2"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5^10"</span><span class="p">,</span>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">        </span><span class="nt">"p7"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="w">    </span><span class="nt">"highlight"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="w">        </span><span class="nt">"1"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="w">            </span><span class="nt">"mapping"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="w">                </span><span class="nt">"10"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="w">                    </span><span class="nt">"night"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span>
+</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="w">                </span><span class="p">}</span>
+</span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="w">            </span><span class="p">}</span>
+</span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a><span class="w">        </span><span class="p">},</span>
+</span><span id="__span-5-20"><a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a><span class="w">        </span><span class="nt">"2"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-21"><a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a><span class="w">            </span><span class="nt">"mapping"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-22"><a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a><span class="w">                </span><span class="nt">"5"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-23"><a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a><span class="w">                    </span><span class="nt">"night"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span>
+</span><span id="__span-5-24"><a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a><span class="w">                </span><span class="p">},</span>
+</span><span id="__span-5-25"><a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a><span class="w">                </span><span class="nt">"10"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-26"><a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a><span class="w">                    </span><span class="nt">"night"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span>
+</span><span id="__span-5-27"><a id="__codelineno-5-27" name="__codelineno-5-27" href="#__codelineno-5-27"></a><span class="w">                </span><span class="p">}</span>
+</span><span id="__span-5-28"><a id="__codelineno-5-28" name="__codelineno-5-28" href="#__codelineno-5-28"></a><span class="w">            </span><span class="p">}</span>
+</span><span id="__span-5-29"><a id="__codelineno-5-29" name="__codelineno-5-29" href="#__codelineno-5-29"></a><span class="w">        </span><span class="p">},</span>
+</span><span id="__span-5-30"><a id="__codelineno-5-30" name="__codelineno-5-30" href="#__codelineno-5-30"></a><span class="w">        </span><span class="nt">"7"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-31"><a id="__codelineno-5-31" name="__codelineno-5-31" href="#__codelineno-5-31"></a><span class="w">            </span><span class="nt">"mapping"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-32"><a id="__codelineno-5-32" name="__codelineno-5-32" href="#__codelineno-5-32"></a><span class="w">                </span><span class="nt">"0"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-33"><a id="__codelineno-5-33" name="__codelineno-5-33" href="#__codelineno-5-33"></a><span class="w">                    </span><span class="nt">"night"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3"</span>
+</span><span id="__span-5-34"><a id="__codelineno-5-34" name="__codelineno-5-34" href="#__codelineno-5-34"></a><span class="w">                </span><span class="p">}</span>
+</span><span id="__span-5-35"><a id="__codelineno-5-35" name="__codelineno-5-35" href="#__codelineno-5-35"></a><span class="w">            </span><span class="p">}</span>
+</span><span id="__span-5-36"><a id="__codelineno-5-36" name="__codelineno-5-36" href="#__codelineno-5-36"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-5-37"><a id="__codelineno-5-37" name="__codelineno-5-37" href="#__codelineno-5-37"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-5-38"><a id="__codelineno-5-38" name="__codelineno-5-38" href="#__codelineno-5-38"></a><span class="p">}</span>
+</span></code></pre></div></p>
+<p><a id="highlight-object"></a></p>
+<h3 id="objeto-highlight">Objeto <code>Highlight</code></h3>
+<ul>
+<li><code>default</code>: (<code>object</code>) <a href="#filter-object">Objeto <code>Filter</code></a><ul>
+<li><em>opcional</em></li>
+<li>resaltados predeterminados que se aplicarán</li>
+<li>esto debería usarse rara vez</li>
+</ul>
+</li>
+<li><code>mapping</code>: (<code>object</code>) objeto basado en diccionario<ul>
+<li><em>opcional</em></li>
+<li>Las claves variarán según el objeto contenedor.</li>
+<li>Los valores deben ser <a href="#filter-object">objetos <code>Filter</code></a></li>
+</ul>
+</li>
+</ul>
+<p>Las claves de los objetos <code>Highlight</code> variarán según el objeto que contenga la propiedad <code>highlight</code>.
+Todas las claves son cadenas (<code>string</code>).</p>
+<ul>
+<li>ACS<ul>
+<li>las claves deben ser las mismas que los valores usados en la propiedad <code>pose_map</code></li>
+</ul>
+</li>
+<li><code>Hair</code><ul>
+<li><code>front</code> - resaltados que se aplican a la capa frontal de un objeto <code>Hair</code></li>
+<li><code>back</code> - resaltados que se aplican a la capa trasera de un objeto <code>Hair</code></li>
+<li><code>mid</code> - resaltados que se aplican a la capa media de un objeto <code>Hair</code></li>
+<li><code>def|front</code> - resaltados que se aplican a la capa frontal inclinada de un objeto <code>Hair</code></li>
+<li><code>def|back</code> - resaltados que se aplican a la capa trasera inclinada de un objeto <code>Hair</code></li>
+<li><code>def|mid</code> - resaltados que se aplican a la capa media inclinada de un objeto <code>Hair</code></li>
+</ul>
+</li>
+<li><code>Clothes</code><ul>
+<li><code>0</code> - resaltados que se aplican a la capa body-0 de un objeto <code>Clothes</code></li>
+<li><code>1</code> - resaltados que se aplican a la capa body-1 de un objeto <code>Clothes</code></li>
+<li><code>def|0</code> - resaltados que se aplican a la capa body-0 inclinada de un objeto <code>Clothes</code></li>
+<li><code>def|1</code> - resaltados que se aplican a la capa body-1 inclinada de un objeto <code>Clothes</code></li>
+</ul>
+</li>
+<li>Objeto <code>PoseArm</code><ul>
+<li><code>0</code> - resaltados que se aplican a la capa arm-0 de un objeto de brazo</li>
+<li><code>5</code> - resaltados que se aplican a la capa arm-5 de un objeto de brazo</li>
+<li><code>10</code> - resaltados que se aplican a la capa arm-10 de un objeto de brazo</li>
+</ul>
+</li>
+<li>Objeto <code>HighlightSplit</code><ul>
+<li><code>0</code> - resaltados que se aplican a la capa acs-0</li>
+<li><code>1</code> - resaltados que se aplican a la capa acs-1</li>
+<li><code>5</code> - resaltados que se aplican a la capa acs-5</li>
+<li><code>10</code> - resaltados que se aplican a la capa acs-10</li>
+</ul>
+</li>
+</ul>
+<p><a id="filter-object"></a></p>
+<h3 id="objeto-filter">Objeto <code>Filter</code></h3>
+<p>Los objetos <code>Filter</code> asignan filtros específicos a códigos de resaltado, que determinan qué capa de resaltado usar según el filtro actual. Estos códigos de resaltado se añaden al final de los archivos (antes de la extensión) como <code>-h#</code>, donde <code>#</code> es el código.</p>
+<ul>
+<li><code>default</code>: (<code>string</code>) código de resaltado por defecto que se usará<ul>
+<li><em>opcional</em></li>
+<li>se aplica siempre, independientemente del filtro</li>
+<li>esto debería usarse rara vez</li>
+</ul>
+</li>
+<li><code>day</code>: (<code>string</code>) código de resaltado que se usará para el filtro de día<ul>
+<li><em>opcional</em></li>
+<li>se aplica cuando se usa el filtro de día</li>
+</ul>
+</li>
+<li><code>night</code>: (<code>string</code>) código de resaltado que se usará para el filtro de noche<ul>
+<li><em>opcional</em></li>
+<li>se aplica cuando se usa el filtro de noche</li>
+</ul>
+</li>
+</ul>
+<p><a id="file-locations"></a>
+<a id="ubicaciones-de-archivos"></a></p>
+<h1 id="ubicaciones-de-archivos">Ubicaciones de archivos</h1>
+<p>Todos los JSON de sprites deben añadirse en <code>game/mod_assets/monika/j/</code>. Cuando se inicia MAS, el archivo <code>log/spj.log</code> contendrá mensajes sobre los sprites, incluidas advertencias y errores encontrados durante el análisis. Los errores significan que el sprite <strong>no</strong> se cargó. Las advertencias significan que el sprite se cargó, pero puede dar problemas más adelante.</p>
+<p>Los archivos de arte deben ir en las carpetas correspondientes, pero la estructura exacta depende de la <code>version</code>.</p>
+<p>Independientemente de la versión, el archivo de registro <code>spj.log</code> mostrará advertencias si los sprites correspondientes no se encuentran o no se pueden cargar.</p>
+<p>Para toda la ropa y miniaturas:</p>
+<ul>
+<li><code>game/mod_assets/monika/c/clothing_name/*</code> - ropa</li>
+<li><code>game/mod_assets/thumbs/*</code> - miniaturas para selectores</li>
+</ul>
+<p><a id="version-4-file-locations-v01216"></a></p>
+<h3 id="ubicaciones-de-archivos-de-la-version-4-v01216">Ubicaciones de archivos de la versión 4 (v0.12.16+)</h3>
+<p>ACS y <code>Hair</code> deben tener su propia subcarpeta dentro de <code>a/</code> y <code>h/</code>, correspondiente a su campo <code>img_sit</code>:</p>
+<ul>
+<li><code>game/mod_assets/monika/a/acs_name/*</code> - ACS</li>
+<li><code>game/mod_assets/monika/h/hair_name/*</code> - <code>Hair</code></li>
+</ul>
+<p>Los nombres de archivo <strong>no</strong> deben incluir la cadena del campo <code>img_sit</code>. Por ejemplo, con un JSON como este:
+<div class="highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="p">{</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">    </span><span class="nt">"img_sit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"filenameacs"</span><span class="p">,</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">    </span><span class="nt">"pose_map"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">        </span><span class="nt">"p1"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">        </span><span class="nt">"p2"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">        </span><span class="nt">"p5"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5"</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="p">}</span>
+</span></code></pre></div></p>
+<p>Los archivos y rutas deberían verse así:</p>
+<ul>
+<li><code>a/filenameacs/0.png</code></li>
+<li><code>a/filenameacs/1.png</code></li>
+<li><code>a/filenameacs/5.png</code></li>
+</ul>
+<p><a id="version-3-file-locations-v0110-v01215"></a></p>
+<h3 id="ubicaciones-de-archivos-de-la-version-3-v0110-v01215">Ubicaciones de archivos de la versión 3 (v0.11.0 - v0.12.15)</h3>
+<p>ACS y <code>Hair</code> deben colocarse directamente en las carpetas <code>a/</code> y <code>h/</code>:</p>
+<ul>
+<li><code>game/mod_assets/monika/a/*</code> - ACS</li>
+<li><code>game/mod_assets/monika/h/*</code> - <code>Hair</code></li>
+</ul>
+<p>Los nombres de archivo deben incluir la cadena del campo <code>img_sit</code>. Por ejemplo, con un JSON como este:
+<div class="highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="p">{</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">    </span><span class="nt">"img_sit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"filenameacs"</span><span class="p">,</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">    </span><span class="nt">"pose_map"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">        </span><span class="nt">"p1"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">        </span><span class="nt">"p2"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">        </span><span class="nt">"p5"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5"</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="p">}</span>
+</span></code></pre></div></p>
+<p>Los archivos y rutas deberían verse así:
+* <code>a/acs-filenameacs-0.png</code>
+* <code>a/acs-filenameacs-1.png</code>
+* <code>a/acs-filenameacs-5.png</code></p>
+<p><a id="prog-points"></a>
+<a id="puntos-prog"></a></p>
+<h1 id="puntos-prog">Puntos prog</h1>
+<p>A los sprites JSON se les pueden seguir asignando puntos prog, aunque estos se determinan por programación. Los puntos prog deben existir en el nivel de init -2 del store <code>mas_sprites</code> con el siguiente formato de nombre:</p>
+<ul>
+<li>ACS:<ul>
+<li><code>_acs_name_entry</code></li>
+<li><code>_acs_name_exit</code></li>
+</ul>
+</li>
+<li>HAIR:<ul>
+<li><code>_hair_name_entry</code></li>
+<li><code>_hair_name_exit</code></li>
+</ul>
+</li>
+<li>CLOTHES:<ul>
+<li><code>_clothes_name_entry</code></li>
+<li><code>_clothes_name_exit</code></li>
+</ul>
+</li>
+</ul>
+<p><code>Name</code> en los formatos anteriores se sustituye por la propiedad <code>name</code> del JSON.</p>
+<p>En el arranque se comprueba que los puntos prog existan y sean invocables, y se registran en <code>log/spj.log</code> independientemente del estado de <code>dryrun</code>. Los puntos prog también se pueden comprobar usando un tema de desarrollo ubicado en <code>dev/dev_sprites</code>. Esta herramienta se recomienda para probar puntos prog, ya que captura excepciones y evita cierres inesperados.</p>
+<p><a id="gift-reactions"></a>
+<a id="reacciones-de-regalos"></a></p>
+<h1 id="reacciones-de-regalos">Reacciones de regalos</h1>
+<p>Si se rellena <code>giftname</code>, el sprite se añade al sistema de reacciones. Este intenta usar etiquetas explícitas antes de recurrir a etiquetas genéricas. Las etiquetas de reacción deben tener los siguientes nombres:</p>
+<ul>
+<li>ACS : <code>mas_reaction_gift_acs_&lt;name&gt;</code></li>
+<li>HAIR: <code>mas_reaction_gift_hair_&lt;name&gt;</code></li>
+<li>CLOTHES: <code>mas_reaction_gift_clothes_&lt;name&gt;</code></li>
+</ul>
+<p>donde <code>&lt;name&gt;</code> se sustituye por la propiedad <code>name</code> del JSON.</p>
+<p>La etiqueta de reacción genérica es <code>mas_reaction_gift_generic_sprite_json</code>.</p>
+<p>Todas las etiquetas de reacción <strong>deben</strong> empezar con una llamada a <code>mas_getSpriteObjInfo</code> y terminar con una llamada a <code>mas_finishSpriteObjInfo</code> antes de la llamada a la función de borrado de archivos. Consulta la etiqueta de reacción genérica para ver un ejemplo. Consulta también las funciones correspondientes en <code>zz_reactions</code> para más información.</p>
+<p><a id="available-exprops"></a>
+<a id="exprops-disponibles"></a></p>
+<h1 id="exprops-disponibles">Exprops disponibles</h1>
+<table>
+<thead>
+<tr>
+<th>exprop</th>
+<th style="text-align: center;">ACS?</th>
+<th style="text-align: center;">peinado?</th>
+<th style="text-align: center;">ropa?</th>
+<th>efectos</th>
+<th>valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>bare-right-shoulder</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td>indica que esta ropa deja el hombro derecho al descubierto</td>
+<td>ignorado</td>
+</tr>
+<tr>
+<td><code>cosplay</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td>indica que esta ropa es de cosplay</td>
+<td>ignorado</td>
+</tr>
+<tr>
+<td><code>costume</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td>indica que esta ropa es un disfraz</td>
+<td>ignorado</td>
+</tr>
+<tr>
+<td><code>desired-ribbon</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td>fuerza a llevar un lazo al cambiar a esta ropa</td>
+<td>el <code>name</code> del lazo que se debe llevar, como <code>string</code></td>
+</tr>
+<tr>
+<td><code>drink</code></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td>indica que este ACS es un objeto de bebida</td>
+<td>ignorado</td>
+</tr>
+<tr>
+<td><code>excluded-clothes-props</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td>limita este peinado para que solo pueda llevarse con ropa que <strong>no</strong> contenga ninguno de los <code>ex_props</code> especificados</td>
+<td>lista de <code>ex_props</code> que se excluirán, como lista de <code>string</code></td>
+</tr>
+<tr>
+<td><code>excluded-hair-props</code></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td>limita este ACS para que solo pueda llevarse con peinados que <strong>no</strong> contengan ninguno de los <code>ex_props</code> especificados</td>
+<td>lista de <code>ex_props</code> que se excluirán, como lista de <code>string</code></td>
+</tr>
+<tr>
+<td><code>food</code></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td>indica que este ACS es un objeto de comida</td>
+<td>ignorado</td>
+</tr>
+<tr>
+<td><code>left-desk-acs</code></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td>indica que este ACS está en el lado izquierdo del escritorio de Monika. Se usa para evitar superponer ACS en el mismo sitio</td>
+<td>ignorado</td>
+</tr>
+<tr>
+<td><code>lingerie</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td>indica que esta ropa es lencería</td>
+<td>ignorado</td>
+</tr>
+<tr>
+<td><code>no-tails</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td>indica que este peinado no tiene coletas</td>
+<td>ignorado</td>
+</tr>
+<tr>
+<td><code>required-clothes-prop</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td>limita este peinado para que solo pueda llevarse con ropa que contenga un <code>ex_prop</code> específico</td>
+<td>el <code>ex_prop</code> que este peinado requiere, como <code>string</code></td>
+</tr>
+<tr>
+<td><code>required-hair-prop</code></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td>limita este ACS para que solo pueda llevarse con peinados que contengan un <code>ex_prop</code> específico</td>
+<td>el <code>ex_prop</code> que este ACS requiere, como <code>string</code></td>
+</tr>
+<tr>
+<td><code>ribbon</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td>habilita lazos para este peinado</td>
+<td>ignorado</td>
+</tr>
+<tr>
+<td><code>ribbon-like</code></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td>indica que este ACS debe considerarse similar a un lazo, pero no es una versión directa del lazo principal</td>
+<td>ignorado</td>
+</tr>
+<tr>
+<td><code>ribbon-off</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td>quita el lazo si se lleva puesto al cambiar a este peinado</td>
+<td>ignorado</td>
+</tr>
+<tr>
+<td><code>ribbon-restore</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td>restaura el lazo usado previamente al cambiar a este peinado, si se encuentra</td>
+<td>ignorado</td>
+</tr>
+<tr>
+<td><code>tiedstrand</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td>indica que este peinado es de tipo <code>tiedstrand</code></td>
+<td>ignorado</td>
+</tr>
+<tr>
+<td><code>twin-ribbon</code></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td>indica que este ACS es un ACS basado en <code>twin-ribbon</code></td>
+<td>ignorado</td>
+</tr>
+<tr>
+<td><code>twintails</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td>indica que este peinado es de tipo <code>twintail</code></td>
+<td>ignorado</td>
+</tr>
+</tbody>
+</table>
+<p><a id="acstemplates"></a></p>
+<h1 id="acstemplates">ACSTemplates</h1>
+<p><code>ACSTemplates</code> se usa para asignar valores por defecto a ciertas propiedades. Se pueden seguir proporcionando propiedades personalizadas mediante JSON, pero <strong>no</strong> sobrescribirán los valores por defecto que aportan las plantillas.
+<strong>NOTA:</strong> Es posible que <code>ACSTemplates</code> no esté completamente actualizado a partir de la versión 0.11.0. Separaré esto (y las exprops) en una página independiente que se generará automáticamente.</p>
+<p>Propiedades que se pueden plantillar:</p>
+<ul>
+<li><code>mux_type</code></li>
+<li><code>ex_props</code></li>
+<li><code>keep_on_desk</code></li>
+</ul>
+<p>Aquí tienes la lista de plantillas actuales y qué valores por defecto aplican.
+Los elementos en MAYÚSCULAS se describen en la segunda tabla.</p>
+<table>
+<thead>
+<tr>
+<th><code>acs-type</code></th>
+<th><code>mux_type</code> por defecto</th>
+<th><code>ex_props</code> por defecto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>bow</code></td>
+<td><code>DEF_MUX_RB</code></td>
+<td><code>ribbon-like: True</code>, <code>excluded-hair-props: DEF_EXP_TT_EXCL</code></td>
+</tr>
+<tr>
+<td><code>bunny-scrunchie</code></td>
+<td><code>DEF_MUX_RB</code></td>
+<td><code>ribbon-like: True</code>, <code>excluded-hair-props: DEF_EXP_TT_EXCL</code></td>
+</tr>
+<tr>
+<td><code>headband</code></td>
+<td><code>DEF_MUX_HB</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>headset</code></td>
+<td><code>DEF_MUX_HS</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>left-hair-clip</code></td>
+<td><code>DEF_MUX_LHC</code></td>
+<td><code>left-hair-strand-eye-level: True</code></td>
+</tr>
+<tr>
+<td><code>left-hair-flower</code></td>
+<td><code>left-hair-flower</code>, <code>left-hair-flower-ear</code></td>
+<td><code>left-hair-strand-eye-level: True</code></td>
+</tr>
+<tr>
+<td><code>left-hair-flower-ear</code></td>
+<td><code>DEF_MUX_LHFE</code></td>
+<td><code>left-hair-strand-eye-level: True</code></td>
+</tr>
+<tr>
+<td><code>mug</code></td>
+<td><code>mug</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>necklace</code></td>
+<td><code>necklace</code></td>
+<td><code>bare collar: True</code></td>
+</tr>
+<tr>
+<td><code>ribbon</code></td>
+<td><code>DEF_MUX_RB</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>twin-ribbons</code></td>
+<td><code>DEF_MUX_RB</code></td>
+<td><code>twin-ribbon: True</code>, <code>ribbon-like: True</code>, <code>required-hair-prop: twintails</code></td>
+</tr>
+<tr>
+<td><code>wrist-bracelet</code></td>
+<td><code>wrist-bracelet</code></td>
+<td><code>bare wrist: True</code></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><code>elemento</code></th>
+<th><code>valor</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>DEF_EXP_TT_EXCL</code></td>
+<td><code>twintails</code></td>
+</tr>
+<tr>
+<td><code>DEF_MUX_RB</code></td>
+<td><code>ribbon</code>, <code>bow</code>, <code>bunny-scrunchie</code>, <code>hat</code>, <code>s-type-ribbon</code>, <code>twin-ribbons</code></td>
+</tr>
+<tr>
+<td><code>DEF_MUX_HAT</code></td>
+<td><code>hat</code>, <code>bow</code>, <code>bunny-scrunchie</code>, <code>earphones</code>, <code>front-hair-flower-crown</code>, <code>headband</code>, <code>headphones</code>, <code>headset</code>, <code>left-hair-flower</code>, <code>ribbon</code>, <code>s-type-ribbon</code>, <code>twin-tibbons</code></td>
+</tr>
+<tr>
+<td><code>DEF_MUX_HB</code></td>
+<td><code>headband</code>, <code>hat</code>, <code>headphones</code>, <code>headset</code></td>
+</tr>
+<tr>
+<td><code>DEF_MUX_HS</code></td>
+<td><code>headset</code>, <code>earphones</code>, <code>hat</code>, <code>headband</code>, <code>headphones</code>, <code>left-hair-flower-ear</code></td>
+</tr>
+<tr>
+<td><code>DEF_MUX_LD</code></td>
+<td><code>chocs</code>, <code>plate</code>, <code>plush_q</code></td>
+</tr>
+<tr>
+<td><code>DEF_MUX_LHC</code></td>
+<td><code>left-hair-clip</code></td>
+</tr>
+<tr>
+<td><code>DEF_MUX_LHFE</code></td>
+<td><code>left-hair-flower-ear</code>, <code>earphones</code>, <code>front-hair-flower-crown</code>, <code>hat</code>, <code>headset</code>, <code>headphones</code>, <code>left-hair-flower</code></td>
+</tr>
+</tbody>
+</table>
+<p><a id="version-history"></a>
+<a id="historial-de-versiones"></a></p>
+<h1 id="historial-de-versiones">Historial de versiones</h1>
+<ul>
+<li>0.12.16 - versiones actualizadas y se añadió información sobre la nueva estructura de archivos</li>
+<li>0.11.0 - se añadió la propiedad <code>keep_on_desk</code> a <code>ACSTemplates</code>. Se eliminó <code>hover_dlg</code> de los JSON. Se añadió <code>highlight</code> a los JSON. Se actualizó <code>pose_arms</code> para los JSON. Se añadieron las exprops <code>bare-right-shoulder</code>, <code>drink</code>, <code>excluded-clothes-props</code>, <code>food</code>, <code>left-desk-acs</code>, <code>lingerie</code>, <code>no-tails</code>, <code>required-clothes-prop</code>, <code>tiedstrand</code></li>
+<li>0.10.4 - se actualizaron <code>left-hair-flower</code> y <code>bow</code> en <code>ACSTemplates</code>, y se añadió <code>bunny-scrunchie</code>. Se añadió la exprop <code>excluded-hair-props</code>.</li>
+<li>0.10.3 - se actualizó <code>left-hair-flower</code> en <code>ACSTemplates</code> y se añadió <code>left-hair-flower-ear</code></li>
+<li>0.10.2 - se añadieron las exprops <code>ribbon-like</code>, <code>required-hair-prop</code>, <code>twintails</code>, <code>costume</code> y <code>cosplay</code>. Se añadieron <code>dlg_desc</code> y <code>dlg_plural</code>. Se añadieron <code>ACSTemplates</code>.</li>
+<li>0.10.0 - actualizado para funcionar con el nuevo sistema <code>split-base</code></li>
+<li>0.9.4 - creado</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.path", "navigation.tracking", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
